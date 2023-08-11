@@ -19,6 +19,11 @@
 		BD3272272A851EE4008FACAB /* GmarketSansTTFMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD3272242A851EE4008FACAB /* GmarketSansTTFMedium.ttf */; };
 		BD3272282A851EE4008FACAB /* GmarketSansTTFBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD3272252A851EE4008FACAB /* GmarketSansTTFBold.ttf */; };
 		BD32722A2A852766008FACAB /* homeKid.json in Resources */ = {isa = PBXBuildFile; fileRef = BD3272292A852766008FACAB /* homeKid.json */; };
+		BDA61FDE2A86195A000B57DC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FDD2A86195A000B57DC /* ListViewController.swift */; };
+		BDA61FE02A861972000B57DC /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FDF2A861972000B57DC /* FavoriteViewController.swift */; };
+		BDA61FE22A861B3D000B57DC /* KinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FE12A861B3D000B57DC /* KinderModel.swift */; };
+		BDA61FE42A861B49000B57DC /* KinderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FE32A861B49000B57DC /* KinderData.swift */; };
+		BDA61FE62A861B52000B57DC /* KinderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FE52A861B52000B57DC /* KinderManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		BD3272242A851EE4008FACAB /* GmarketSansTTFMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFMedium.ttf; sourceTree = "<group>"; };
 		BD3272252A851EE4008FACAB /* GmarketSansTTFBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFBold.ttf; sourceTree = "<group>"; };
 		BD3272292A852766008FACAB /* homeKid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homeKid.json; sourceTree = "<group>"; };
+		BDA61FDD2A86195A000B57DC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		BDA61FDF2A861972000B57DC /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		BDA61FE12A861B3D000B57DC /* KinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderModel.swift; sourceTree = "<group>"; };
+		BDA61FE32A861B49000B57DC /* KinderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderData.swift; sourceTree = "<group>"; };
+		BDA61FE52A861B52000B57DC /* KinderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderManager.swift; sourceTree = "<group>"; };
 		F45B84FED357650760A52423 /* Pods-OurKids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurKids.debug.xcconfig"; path = "Target Support Files/Pods-OurKids/Pods-OurKids.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,11 +101,11 @@
 		BD32720A2A851E93008FACAB /* OurKids */ = {
 			isa = PBXGroup;
 			children = (
-				BD32722B2A85311D008FACAB /* Controller */,
 				BD32720B2A851E93008FACAB /* AppDelegate.swift */,
 				BD32720D2A851E93008FACAB /* SceneDelegate.swift */,
-				BD32720F2A851E93008FACAB /* ViewController.swift */,
-				BD3272112A851E93008FACAB /* Main.storyboard */,
+				BDA61FDC2A8618C5000B57DC /* Model */,
+				BDA61FDB2A8618BE000B57DC /* View */,
+				BD32722B2A85311D008FACAB /* Controller */,
 				BD3272172A851E95008FACAB /* Assets.xcassets */,
 				BD3272222A851ED1008FACAB /* Fonts */,
 				BD3272192A851E95008FACAB /* LaunchScreen.storyboard */,
@@ -118,8 +128,29 @@
 		BD32722B2A85311D008FACAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BD32720F2A851E93008FACAB /* ViewController.swift */,
+				BDA61FDD2A86195A000B57DC /* ListViewController.swift */,
+				BDA61FDF2A861972000B57DC /* FavoriteViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDA61FDB2A8618BE000B57DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD3272112A851E93008FACAB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDA61FDC2A8618C5000B57DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDA61FE52A861B52000B57DC /* KinderManager.swift */,
+				BDA61FE32A861B49000B57DC /* KinderData.swift */,
+				BDA61FE12A861B3D000B57DC /* KinderModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +273,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3272102A851E93008FACAB /* ViewController.swift in Sources */,
+				BDA61FE22A861B3D000B57DC /* KinderModel.swift in Sources */,
+				BDA61FE42A861B49000B57DC /* KinderData.swift in Sources */,
+				BDA61FE62A861B52000B57DC /* KinderManager.swift in Sources */,
 				BD3272162A851E93008FACAB /* OurKids.xcdatamodeld in Sources */,
 				BD32720C2A851E93008FACAB /* AppDelegate.swift in Sources */,
+				BDA61FDE2A86195A000B57DC /* ListViewController.swift in Sources */,
+				BDA61FE02A861972000B57DC /* FavoriteViewController.swift in Sources */,
 				BD32720E2A851E93008FACAB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

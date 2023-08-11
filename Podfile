@@ -7,5 +7,6 @@ target 'OurKids' do
 
   # Pods for OurKids
   pod 'lottie-ios'
+  pod 'CRPickerButton'
 
 end

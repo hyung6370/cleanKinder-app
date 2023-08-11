@@ -82,7 +82,7 @@
                                 </state>
                                 <connections>
                                     <action selector="kinderButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDh-VP-msG"/>
-                                    <segue destination="xnY-Kw-OOf" kind="show" id="H6h-wO-Pcl"/>
+                                    <segue destination="TPc-Uv-6AW" kind="show" id="H6h-wO-Pcl"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeR-Gu-lYx" userLabel="Lottie View" customClass="LottieAnimationView" customModule="Lottie">
@@ -108,7 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jQx-CG-zVa"/>
                     <connections>
-                        <outlet property="kinderButton" destination="51m-yq-y8w" id="cln-Rp-wvs"/>
+                        <outlet property="kinderButton" destination="51m-yq-y8w" id="YpD-4z-CCN"/>
                         <outlet property="lottieView" destination="OeR-Gu-lYx" id="JGh-vM-2if"/>
                     </connections>
                 </viewController>
@@ -116,21 +116,89 @@
             </objects>
             <point key="canvasLocation" x="881.67938931297704" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--유치원 리스트-->
         <scene sceneID="JFO-94-zKh">
             <objects>
-                <viewController id="xnY-Kw-OOf" sceneMemberID="viewController">
+                <viewController id="xnY-Kw-OOf" customClass="ListViewController" customModule="OurKids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LcO-8v-osx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHO-yd-yJ1">
+                                <rect key="frame" x="10" y="103" width="373" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W24-Xb-ndl">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강남구" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP9-Kg-RYx">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="70"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpO-Mx-BGd">
+                                                <rect key="frame" x="173" y="0.0" width="200" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="8Kd-CD-gem"/>
+                                                    <constraint firstAttribute="height" constant="70" id="gRC-5x-k5l"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94700592760000002" green="0.81795060630000005" blue="0.29820162059999999" alpha="0.60265749497520693" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="W24-Xb-ndl" secondAttribute="trailing" id="GbH-kx-r2N"/>
+                                    <constraint firstAttribute="bottom" secondItem="W24-Xb-ndl" secondAttribute="bottom" id="J78-eL-mFb"/>
+                                    <constraint firstAttribute="height" constant="70" id="QG6-8c-PH3"/>
+                                    <constraint firstItem="W24-Xb-ndl" firstAttribute="leading" secondItem="bHO-yd-yJ1" secondAttribute="leading" id="bVr-tg-YmB"/>
+                                    <constraint firstItem="W24-Xb-ndl" firstAttribute="top" secondItem="bHO-yd-yJ1" secondAttribute="top" id="bag-O0-mQr"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GkK-m2-cQN">
+                                <rect key="frame" x="0.0" y="173" width="393" height="596"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vwm-DQ-iT8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GkK-m2-cQN" firstAttribute="leading" secondItem="vwm-DQ-iT8" secondAttribute="leading" id="2qC-g6-SS0"/>
+                            <constraint firstItem="bHO-yd-yJ1" firstAttribute="leading" secondItem="vwm-DQ-iT8" secondAttribute="leading" constant="10" id="7KK-kn-f6S"/>
+                            <constraint firstItem="vwm-DQ-iT8" firstAttribute="trailing" secondItem="GkK-m2-cQN" secondAttribute="trailing" id="KqU-GS-M8N"/>
+                            <constraint firstItem="vwm-DQ-iT8" firstAttribute="trailing" secondItem="bHO-yd-yJ1" secondAttribute="trailing" constant="10" id="PUe-fp-6kd"/>
+                            <constraint firstItem="vwm-DQ-iT8" firstAttribute="bottom" secondItem="GkK-m2-cQN" secondAttribute="bottom" id="jLF-R0-C5r"/>
+                            <constraint firstItem="bHO-yd-yJ1" firstAttribute="top" secondItem="vwm-DQ-iT8" secondAttribute="top" id="osk-1q-HAk"/>
+                            <constraint firstItem="GkK-m2-cQN" firstAttribute="top" secondItem="bHO-yd-yJ1" secondAttribute="bottom" id="wqb-ri-r4U"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="유치원 리스트" image="list.dash.header.rectangle" catalog="system" id="yT8-tK-kQc"/>
                     <navigationItem key="navigationItem" id="F6J-9j-WFB"/>
+                    <connections>
+                        <outlet property="guLabel" destination="QP9-Kg-RYx" id="m0d-BO-ffg"/>
+                        <outlet property="guPickerView" destination="cpO-Mx-BGd" id="mP1-sz-kNv"/>
+                        <outlet property="guView" destination="bHO-yd-yJ1" id="sbG-CM-sk9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgc-6S-QyR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.4656488549617" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="2796.1832061068703" y="-27.464788732394368"/>
+        </scene>
+        <!--즐겨찾기-->
+        <scene sceneID="hxv-Ge-KHB">
+            <objects>
+                <viewController id="LLL-R0-Fpn" customClass="FavoriteViewController" customModule="OurKids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="21H-YB-i9P">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pP5-kc-u9v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="즐겨찾기" image="star.fill" catalog="system" id="9sH-yO-KFa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1I-SG-3Cj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="687"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rXC-rm-FHO">
@@ -150,8 +218,32 @@
             </objects>
             <point key="canvasLocation" x="-45.038167938931295" y="-27.464788732394368"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hwN-Z3-RtD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TPc-Uv-6AW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aTH-qn-gL4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b46-cS-kv5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xnY-Kw-OOf" kind="relationship" relationship="viewControllers" id="c9d-L5-fkR"/>
+                        <segue destination="LLL-R0-Fpn" kind="relationship" relationship="viewControllers" id="FT1-n7-SZM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LqW-pp-gsu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.4656488549617" y="-27.464788732394368"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="list.dash.header.rectangle" catalog="system" width="128" height="93"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
