@@ -27,5 +27,17 @@
 			</array>
 		</dict>
 	</dict>
+
+	<key>NSAppTransportSecurity</key>
+	<dict>
+   		<key>NSExceptionDomains</key>
+    		<dict>
+        		<key>openapi.seoul.go.kr</key>
+        		<dict>
+            			<key>NSExceptionAllowsInsecureHTTPLoads</key>
+            			<true/>
+        		</dict>
+    		</dict>
+	</dict>
 </dict>
 </plist>

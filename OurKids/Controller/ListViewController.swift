@@ -30,6 +30,7 @@ class ListViewController: UIViewController {
         
         guPickerView.delegate = self
         guPickerView.dataSource = self
+        
     }
 
 
@@ -37,6 +38,13 @@ class ListViewController: UIViewController {
     func configureUI() {
         guView.layer.cornerRadius = 20
         guView.clipsToBounds = true
+    }
+    
+    func getCityCode(forRow row: Int) -> String {
+        // 해당 행의 인덱스에 기반하여 도시 코드를 매핑하는 로직을 구현합니다.
+        // 예를 들어, 딕셔너리를 사용하여 인덱스를 도시 코드로 매핑할 수 있습니다.
+        let cityCodes: [String] = ["gn", "gd", "gb", "gs", "ga", "gj", "gr", "gc", "nw", "db", "dj", "dd", "mp", "sc", "sm", "sd", "sb", "sp", "yc", "yd", "ys", "ep", "jn", "jg", "jr"]
+        return cityCodes[row]
     }
     
 
@@ -60,9 +68,12 @@ extension ListViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedCityCode = getCityCode(forRow: row)
         let selectedGu = guList[row]
         guLabel.text = selectedGu
-        print(selectedGu)
+        
+        kinderManager.fetchKinder(cityCode: selectedCityCode)
+
     }
 }
 
