@@ -13,7 +13,6 @@ struct KinderManager {
     
     func fetchKinder(cityCode: String) {
         let urlString = "\(kinderURL)\(cityCode)/1/100"
-        print(urlString)
         self.performRequest(urlString: urlString)
     }
     
@@ -31,7 +30,6 @@ struct KinderManager {
                 
                 if let safeData = data {
                     let dataString = String(data: safeData, encoding: .utf8)
-                    print(dataString)
                     
                     self.parseJSON(kinderData: safeData)
                 }
@@ -44,7 +42,15 @@ struct KinderManager {
     }
     
     func parseJSON(kinderData: Data) {
-        
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(KinderData.self, from: kinderData)
+            print(decodedData.row[0].KINDERNAME)
+            print(decodedData.row[0].ADDR)
+        }
+        catch {
+            print(error)
+        }
     }
     
 }
