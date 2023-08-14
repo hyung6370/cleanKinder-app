@@ -241,6 +241,9 @@
             <point key="canvasLocation" x="1869.4656488549617" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="OeR-Gu-lYx"/>
+    </designables>
     <resources>
         <image name="list.dash.header.rectangle" catalog="system" width="128" height="93"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
