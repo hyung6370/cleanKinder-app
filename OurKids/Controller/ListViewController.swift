@@ -35,12 +35,24 @@ class ListViewController: UIViewController {
         kinderTableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "KinderCell")
         kinderTableView.delegate = self
         kinderTableView.dataSource = self
+        
+        kinderManager.delegate = self
+        
+        initialData()
     }
 
     func configureUI() {
         guView.layer.cornerRadius = 20
         guView.clipsToBounds = true
     }
+    
+    func initialData() {
+            guLabel.text = guList[0]
+            guPickerView.selectRow(0, inComponent: 0, animated: true)
+            kinderManager.fetchKinder(cityCode: getCityCode(forRow: 0))
+            
+        kinderTableView.separatorColor = UIColor(hexCode: "ff7b00")
+        }
     
     func getCityCode(forRow row: Int) -> String {
 
@@ -69,6 +81,8 @@ extension ListViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let selectedCityCode = getCityCode(forRow: row)
         let selectedGu = guList[row]
         guLabel.text = selectedGu
+        
+        kinders.removeAll()
         
         kinderManager.fetchKinder(cityCode: selectedCityCode)
         
@@ -177,5 +191,26 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.kinderAddressLabel.text = kinder.kinderAddress
         
         return cell
+    }
+}
+
+extension UIColor {
+
+    convenience init(hexCode: String, alpha: CGFloat = 1.0) {
+        var hexFormatted: String = hexCode.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+        
+        if hexFormatted.hasPrefix("#") {
+            hexFormatted = String(hexFormatted.dropFirst())
+        }
+        
+        assert(hexFormatted.count == 6, "Invalid hex code used.")
+        
+        var rgbValue: UInt64 = 0
+        Scanner(string: hexFormatted).scanHexInt64(&rgbValue)
+        
+        self.init(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                  green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                  blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                  alpha: alpha)
     }
 }

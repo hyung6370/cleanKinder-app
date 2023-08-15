@@ -12,9 +12,6 @@
         <array key="GmarketSansTTFBold.ttf">
             <string>GmarketSansTTFBold</string>
         </array>
-        <array key="GmarketSansTTFLight.ttf">
-            <string>GmarketSansTTFLight</string>
-        </array>
         <array key="GmarketSansTTFMedium.ttf">
             <string>GmarketSansTTFMedium</string>
         </array>
@@ -22,57 +19,55 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="KinderCell" rowHeight="151" id="KGk-i7-Jjw" customClass="ListTableViewCell" customModule="OurKids" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="328" height="151"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="KinderCell" rowHeight="151" id="KGk-i7-Jjw" customClass="ListTableViewCell" customModule="OurKids" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="151"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="328" height="151"/>
+                <rect key="frame" x="0.0" y="0.0" width="373.66666666666669" height="151"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61A-dd-tH9">
-                        <rect key="frame" x="10" y="10" width="308" height="80"/>
+                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="61A-dd-tH9">
+                        <rect key="frame" x="10" y="10" width="353.66666666666669" height="90"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V2e-Me-BzA">
-                                <rect key="frame" x="10" y="10" width="68.666666666666671" height="29"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkF-ky-3HQ" userLabel="Kinder Name Label">
+                                <rect key="frame" x="10" y="10" width="87.333333333333329" height="15"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkF-ky-3HQ" userLabel="Kinder Name Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="12"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="이름 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qw-V8-NpX">
-                                                <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="12"/>
-                                                <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkQ-8O-FpB">
-                                                <rect key="frame" x="33.333333333333329" y="0.0" width="35.333333333333329" height="12"/>
-                                                <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zey-Jg-e8x" userLabel="Address Label">
-                                        <rect key="frame" x="0.0" y="17" width="68.666666666666671" height="12"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxr-He-4JX">
-                                                <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="12"/>
-                                                <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snj-aH-Faq">
-                                                <rect key="frame" x="33.333333333333329" y="0.0" width="35.333333333333329" height="12"/>
-                                                <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="이름 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qw-V8-NpX">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="15"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="15"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkQ-8O-FpB">
+                                        <rect key="frame" x="41.666666666666671" y="0.0" width="45.666666666666671" height="15"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1qw-V8-NpX" firstAttribute="baseline" secondItem="bkQ-8O-FpB" secondAttribute="firstBaseline" id="xqt-dh-AmV"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zey-Jg-e8x" userLabel="Address Label">
+                                <rect key="frame" x="10" y="35" width="87.333333333333329" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxr-He-4JX">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="20"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="15"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snj-aH-Faq">
+                                        <rect key="frame" x="41.666666666666671" y="0.0" width="45.666666666666671" height="20"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymU-oM-DK8" userLabel="Heart Button">
-                                <rect key="frame" x="278" y="10" width="25" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymU-oM-DK8" userLabel="Heart Button">
+                                <rect key="frame" x="323.66666666666669" y="10" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="Lnd-wq-fgv"/>
                                     <constraint firstAttribute="height" constant="25" id="kaQ-3N-z6B"/>
@@ -81,20 +76,20 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="heart" catalog="system"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fNS-VM-vsy">
-                                <rect key="frame" x="10" y="55" width="261" height="15"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fNS-VM-vsy">
+                                <rect key="frame" x="10.666666666666657" y="65" width="314" height="15"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-Zb-1os">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="실내공기질" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaz-41-fEq" userLabel="First Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="49" height="15"/>
-                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="10"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="15"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-fq-XPa">
-                                                <rect key="frame" x="52" y="0.99999999999999822" width="15" height="13.666666666666668"/>
+                                                <rect key="frame" x="61" y="0.99999999999999822" width="15" height="13.666666666666668"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="ekp-bE-UCx"/>
@@ -104,16 +99,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="soh-SE-po8">
-                                        <rect key="frame" x="75" y="0.0" width="56.666666666666657" height="15"/>
+                                        <rect key="frame" x="91" y="0.0" width="64.333333333333314" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW3-M2-vsb" userLabel="Second Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="38.666666666666664" height="15"/>
-                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="10"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="15"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="enA-ec-lyZ">
-                                                <rect key="frame" x="41.666666666666657" y="0.99999999999999822" width="15" height="13.666666666666668"/>
+                                                <rect key="frame" x="49.333333333333329" y="0.99999999999999822" width="15" height="13.666666666666668"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="7sT-fr-RE3"/>
@@ -123,16 +118,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qR4-lz-fTW">
-                                        <rect key="frame" x="139.66666666666666" y="0.0" width="56.666666666666657" height="15"/>
+                                        <rect key="frame" x="170.33333333333334" y="0.0" width="64.333333333333343" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정기소독" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ9-7c-QES" userLabel="Third Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="38.666666666666664" height="15"/>
-                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="10"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="15"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-9L-5AD">
-                                                <rect key="frame" x="41.666666666666686" y="0.99999999999999822" width="15" height="13.666666666666668"/>
+                                                <rect key="frame" x="49.333333333333343" y="0.99999999999999822" width="15" height="13.666666666666668"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="kS7-XE-rsL"/>
@@ -142,16 +137,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-jA-wpj">
-                                        <rect key="frame" x="204.33333333333334" y="0.0" width="56.666666666666657" height="15"/>
+                                        <rect key="frame" x="249.66666666666666" y="0.0" width="64.333333333333343" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조도관리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDv-ZS-nq3" userLabel="Fourth Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="38.666666666666664" height="15"/>
-                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="10"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="15"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XQX-WV-gGV">
-                                                <rect key="frame" x="41.666666666666657" y="0.99999999999999822" width="15" height="13.666666666666668"/>
+                                                <rect key="frame" x="49.333333333333371" y="0.99999999999999822" width="15" height="13.666666666666668"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="As9-Qu-Uqy"/>
@@ -167,12 +162,14 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="fNS-VM-vsy" secondAttribute="bottom" constant="10" id="8Og-Ny-sBu"/>
                             <constraint firstAttribute="trailing" secondItem="ymU-oM-DK8" secondAttribute="trailing" constant="5" id="9Hj-ul-33O"/>
-                            <constraint firstItem="fNS-VM-vsy" firstAttribute="leading" secondItem="V2e-Me-BzA" secondAttribute="leading" id="G5y-lN-gb3"/>
-                            <constraint firstItem="V2e-Me-BzA" firstAttribute="leading" secondItem="61A-dd-tH9" secondAttribute="leading" constant="10" id="HuO-e8-lLK"/>
+                            <constraint firstItem="WkF-ky-3HQ" firstAttribute="top" secondItem="61A-dd-tH9" secondAttribute="top" constant="10" id="AUu-Md-8Tj"/>
                             <constraint firstItem="ymU-oM-DK8" firstAttribute="top" secondItem="61A-dd-tH9" secondAttribute="top" constant="10" id="LXo-NE-p06"/>
-                            <constraint firstAttribute="trailing" secondItem="fNS-VM-vsy" secondAttribute="trailing" constant="37" id="a8A-Xr-Kgt"/>
-                            <constraint firstItem="V2e-Me-BzA" firstAttribute="top" secondItem="61A-dd-tH9" secondAttribute="top" constant="10" id="fsb-Ch-wmx"/>
-                            <constraint firstAttribute="height" constant="80" id="iko-Hz-kHe"/>
+                            <constraint firstItem="zey-Jg-e8x" firstAttribute="top" secondItem="WkF-ky-3HQ" secondAttribute="bottom" constant="10" id="OfQ-85-CnW"/>
+                            <constraint firstItem="fNS-VM-vsy" firstAttribute="top" secondItem="zey-Jg-e8x" secondAttribute="bottom" constant="10" id="d4W-SU-0bY"/>
+                            <constraint firstItem="zey-Jg-e8x" firstAttribute="leading" secondItem="61A-dd-tH9" secondAttribute="leading" constant="10" id="ehW-b9-zqO"/>
+                            <constraint firstItem="fNS-VM-vsy" firstAttribute="leading" secondItem="61A-dd-tH9" secondAttribute="leading" constant="10.666666666666657" id="fOZ-Np-pZ1"/>
+                            <constraint firstItem="WkF-ky-3HQ" firstAttribute="leading" secondItem="61A-dd-tH9" secondAttribute="leading" constant="10" id="hJT-cE-KLh"/>
+                            <constraint firstAttribute="height" constant="90" id="iko-Hz-kHe"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -190,7 +187,7 @@
                 <outlet property="kinderAddressLabel" destination="Snj-aH-Faq" id="bdm-H6-PPe"/>
                 <outlet property="kinderNameLabel" destination="bkQ-8O-FpB" id="H9J-yl-8LB"/>
             </connections>
-            <point key="canvasLocation" x="68.702290076335871" y="-23.591549295774648"/>
+            <point key="canvasLocation" x="126.71755725190839" y="-23.591549295774648"/>
         </tableViewCell>
     </objects>
     <resources>
