@@ -107,7 +107,6 @@ extension ListViewController: KinderManagerDelegate {
     }
 
     func didUpdateKinderData(kinder: KinderData, cityCode: String) {
-        print("2")
         
         switch cityCode {
         case "gn":
@@ -212,5 +211,17 @@ extension UIColor {
                   green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
                   blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
                   alpha: alpha)
+    }
+}
+
+
+extension ListViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
+            
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
 }
