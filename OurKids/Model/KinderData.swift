@@ -168,24 +168,33 @@ struct Row: Codable {
     let OFFICEEDU: String
     let SUBOFFICEEDU: String
     let KINDERCODE: String
-    let KINDERNAME: String
-    let ESTB_PT: String
-    let ARQL_CHK_DT: String
-    let ARQL_CHK_RSLT_TP_CD: String
+    let KINDERNAME: String  // 유치원명
+    
+    let ESTB_PT: String  // Founder Type
+    
+    let ARQL_CHK_DT: String  // 실내공기질 점검일자
+    let ARQL_CHK_RSLT_TP_CD: String // 실내공기질 점검결과
+    
     let FXTM_DSNF_TRGT_YN: String
-    let FXTM_DSNF_CHK_DT: String
-    let FXTM_DSNF_CHK_RSLT_TP_CD: String
-    let TP_01: String
-    let TP_02: String
-    let TP_03: String
+    
+    let FXTM_DSNF_CHK_DT: String  // 정기소독 점검일자
+    let FXTM_DSNF_CHK_RSLT_TP_CD: String  // 정기소독 점검결과
+    
+    let TP_01: String  // 생수
+    let TP_02: String  // 정수기
+    let TP_03: String  // 상수도
+    
     let TP_04: String
+
     let UNWT_QLWT_INSC_YN: String
     let QLWT_INSC_DT: String
     let QLWT_INSC_STBY_YN: String
-    let MDST_CHK_DT: String
-    let MDST_CHK_RSLT_CD: String
+    
+    let MDST_CHK_DT: String   // 미세먼지 검사일자
+    let MDST_CHK_RSLT_CD: String   // 미세먼지 검사결과
     let ILMN_CHK_DT: String
     let ILMN_CHK_RSLT_CD: String
     let PBNTTMNG: String
-    let ADDR: String
+    
+    let ADDR: String   // 주소
 }

@@ -194,14 +194,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQ7-l9-2ty">
-                                <rect key="frame" x="15" y="69" width="363" height="420"/>
+                                <rect key="frame" x="15" y="69" width="363" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="420" id="CC8-hb-uzf"/>
+                                    <constraint firstAttribute="height" constant="400" id="CC8-hb-uzf"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X7c-Jg-wSI">
-                                <rect key="frame" x="16" y="519" width="136.33333333333334" height="18"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X7c-Jg-wSI" userLabel="Name Stack View">
+                                <rect key="frame" x="15" y="499" width="136.33333333333334" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유치원명 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPu-4s-LfS">
                                         <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="18"/>
@@ -217,10 +217,27 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qff-MY-EgT">
-                                <rect key="frame" x="16" y="552" width="141.33333333333334" height="18"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="s6G-ju-OhP" userLabel="Address Stack View">
+                                <rect key="frame" x="15.000000000000007" y="532" width="101.66666666666669" height="18"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설립 유형 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZi-pN-7AB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K03-NV-xrQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="18"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iha-vK-KEt">
+                                        <rect key="frame" x="50" y="0.0" width="51.666666666666657" height="18"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qff-MY-EgT" userLabel="Founder Stack View">
+                                <rect key="frame" x="15" y="565" width="141.33333333333334" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="설립 유형 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZi-pN-7AB">
                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -234,8 +251,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rIZ-VO-xmz">
-                                <rect key="frame" x="15" y="585" width="220.66666666666666" height="18"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rIZ-VO-xmz" userLabel="InsideAir Stack View">
+                                <rect key="frame" x="15" y="598" width="220.66666666666666" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="실내 공기 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPb-Mt-wN8">
                                         <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="18"/>
@@ -246,7 +263,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-JZ-uFk">
                                         <rect key="frame" x="94.666666666666686" y="0.0" width="126" height="18"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqG-EN-shI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqG-EN-shI">
                                                 <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="18"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -268,42 +285,46 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TlY-KN-hXd">
-                                <rect key="frame" x="15" y="618" width="220.66666666666666" height="18"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TlY-KN-hXd" userLabel="Disinfection Stack View">
+                                <rect key="frame" x="15" y="631" width="220.66666666666666" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정기 소독 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5N-MY-9qt">
-                                        <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="17"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="xU4-rV-wxo">
-                                        <rect key="frame" x="94.666666666666686" y="0.0" width="126" height="18"/>
+                                        <rect key="frame" x="94.666666666666686" y="0.0" width="126" height="17"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="183-1g-2RO">
-                                                <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="17"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" / " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3B-s8-mvE">
-                                                <rect key="frame" x="53.666666666666671" y="0.0" width="18.666666666666671" height="18"/>
+                                                <rect key="frame" x="53.666666666666671" y="0.0" width="18.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaC-jF-6dj">
-                                                <rect key="frame" x="74.333333333333329" y="0.0" width="51.666666666666671" height="18"/>
+                                                <rect key="frame" x="74.333333333333329" y="0.0" width="51.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="b3B-s8-mvE" firstAttribute="baseline" secondItem="IaC-jF-6dj" secondAttribute="firstBaseline" id="Qmc-6d-vns"/>
+                                            <constraint firstItem="b3B-s8-mvE" firstAttribute="centerX" secondItem="xU4-rV-wxo" secondAttribute="centerX" id="mEV-Ux-u1m"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qQ5-zm-Pto">
-                                <rect key="frame" x="15" y="651" width="215.66666666666666" height="18"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qQ5-zm-Pto" userLabel="Illuminance Stack View">
+                                <rect key="frame" x="15" y="663" width="215.66666666666666" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조도관리 검사일자 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-rp-z3c">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
@@ -319,8 +340,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-1A-br6">
-                                <rect key="frame" x="16" y="684" width="215.66666666666666" height="18"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-1A-br6" userLabel="Dust Stack View">
+                                <rect key="frame" x="15" y="696" width="215.66666666666666" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지 검사일자 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZF-hQ-QW5">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
@@ -328,7 +349,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-DH-2z5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-DH-2z5">
                                         <rect key="frame" x="164" y="0.0" width="51.666666666666657" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -337,16 +358,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="maa-tb-tz3">
-                                <rect key="frame" x="16" y="717" width="347" height="18"/>
+                                <rect key="frame" x="15" y="729" width="364.33333333333331" height="18"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생수/정수/상수도 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bze-E3-9dY">
-                                        <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생수/정수기/상수도 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bze-E3-9dY">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-73-vZt">
-                                        <rect key="frame" x="160.66666666666663" y="0.0" width="186.33333333333337" height="18"/>
+                                        <rect key="frame" x="178" y="0.0" width="186.33333333333337" height="18"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qce-SU-eA7">
                                                 <rect key="frame" x="0.0" y="0.0" width="6.333333333333333" height="18"/>
@@ -367,25 +388,25 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-3c-SK3">
-                                                <rect key="frame" x="67.333333333333343" y="0.0" width="51.666666666666657" height="18"/>
+                                                <rect key="frame" x="67.333333333333314" y="0.0" width="51.666666666666657" height="18"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtr-ht-WnG">
-                                                <rect key="frame" x="119.00000000000003" y="0.0" width="9.3333333333333428" height="18"/>
+                                                <rect key="frame" x="119" y="0.0" width="9.3333333333333428" height="18"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEY-e5-UIf">
-                                                <rect key="frame" x="128.33333333333334" y="0.0" width="51.666666666666657" height="18"/>
+                                                <rect key="frame" x="128.33333333333331" y="0.0" width="51.666666666666657" height="18"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaA-ue-rBf">
-                                                <rect key="frame" x="180.00000000000003" y="0.0" width="6.3333333333333428" height="18"/>
+                                                <rect key="frame" x="180" y="0.0" width="6.3333333333333428" height="18"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -398,22 +419,29 @@
                         <viewLayoutGuide key="safeArea" id="IuD-hB-lqi"/>
                         <color key="backgroundColor" red="0.99233597520000005" green="0.97982758280000004" blue="0.78985393049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="rIZ-VO-xmz" firstAttribute="top" secondItem="Qff-MY-EgT" secondAttribute="bottom" constant="15" id="1Qg-yp-pet"/>
-                            <constraint firstItem="H8R-1A-br6" firstAttribute="leading" secondItem="Qff-MY-EgT" secondAttribute="leading" id="9Lj-Ql-gWV"/>
-                            <constraint firstItem="X7c-Jg-wSI" firstAttribute="leading" secondItem="3oF-Sq-qQK" secondAttribute="leadingMargin" id="A8a-J7-Bh1"/>
+                            <constraint firstItem="s6G-ju-OhP" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="4Yw-MJ-snm"/>
+                            <constraint firstItem="Qff-MY-EgT" firstAttribute="top" secondItem="s6G-ju-OhP" secondAttribute="bottom" constant="15" id="Agm-RT-m9K"/>
+                            <constraint firstItem="H8R-1A-br6" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="Agn-lV-BO9"/>
                             <constraint firstItem="H8R-1A-br6" firstAttribute="top" secondItem="qQ5-zm-Pto" secondAttribute="bottom" constant="15" id="C6f-3n-veN"/>
                             <constraint firstItem="YQ7-l9-2ty" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="Cgz-w3-iyS"/>
                             <constraint firstItem="qQ5-zm-Pto" firstAttribute="top" secondItem="TlY-KN-hXd" secondAttribute="bottom" constant="15" id="FC4-dr-9VW"/>
+                            <constraint firstItem="s6G-ju-OhP" firstAttribute="top" secondItem="X7c-Jg-wSI" secondAttribute="bottom" constant="15" id="IOa-Gq-yIC"/>
+                            <constraint firstItem="qQ5-zm-Pto" firstAttribute="top" secondItem="TlY-KN-hXd" secondAttribute="bottom" constant="15" id="MMg-jf-0Gx"/>
+                            <constraint firstItem="rIZ-VO-xmz" firstAttribute="top" secondItem="Qff-MY-EgT" secondAttribute="bottom" constant="15" id="PHW-hg-EBk"/>
                             <constraint firstItem="TlY-KN-hXd" firstAttribute="top" secondItem="rIZ-VO-xmz" secondAttribute="bottom" constant="15" id="R6I-kg-Rva"/>
-                            <constraint firstItem="TlY-KN-hXd" firstAttribute="leading" secondItem="rIZ-VO-xmz" secondAttribute="leading" id="SbE-1f-4uO"/>
-                            <constraint firstItem="qQ5-zm-Pto" firstAttribute="leading" secondItem="TlY-KN-hXd" secondAttribute="leading" id="b5n-XU-76P"/>
+                            <constraint firstItem="TlY-KN-hXd" firstAttribute="top" secondItem="rIZ-VO-xmz" secondAttribute="bottom" constant="15" id="S5f-Pt-68X"/>
+                            <constraint firstItem="TlY-KN-hXd" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="TtV-gY-UZW"/>
+                            <constraint firstItem="maa-tb-tz3" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="YBi-HB-QE1"/>
+                            <constraint firstItem="qQ5-zm-Pto" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="YM4-xE-G0K"/>
+                            <constraint firstItem="Qff-MY-EgT" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="h0A-a5-uDT"/>
                             <constraint firstItem="IuD-hB-lqi" firstAttribute="trailing" secondItem="YQ7-l9-2ty" secondAttribute="trailing" constant="15" id="hdf-zy-FWQ"/>
                             <constraint firstItem="maa-tb-tz3" firstAttribute="leading" secondItem="H8R-1A-br6" secondAttribute="leading" id="hhX-19-3bf"/>
-                            <constraint firstItem="Qff-MY-EgT" firstAttribute="top" secondItem="X7c-Jg-wSI" secondAttribute="bottom" constant="15" id="jMf-Sd-uvu"/>
-                            <constraint firstItem="Qff-MY-EgT" firstAttribute="leading" secondItem="X7c-Jg-wSI" secondAttribute="leading" id="jhf-J3-yAi"/>
                             <constraint firstItem="YQ7-l9-2ty" firstAttribute="top" secondItem="IuD-hB-lqi" secondAttribute="top" constant="10" id="oDd-M6-WvH"/>
                             <constraint firstItem="rIZ-VO-xmz" firstAttribute="leading" secondItem="YQ7-l9-2ty" secondAttribute="leading" id="oqR-mb-iyU"/>
+                            <constraint firstItem="X7c-Jg-wSI" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="qlZ-9M-bSM"/>
+                            <constraint firstItem="rIZ-VO-xmz" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="rnK-pe-YG6"/>
                             <constraint firstItem="X7c-Jg-wSI" firstAttribute="top" secondItem="YQ7-l9-2ty" secondAttribute="bottom" constant="30" id="vA9-CG-XoT"/>
+                            <constraint firstItem="H8R-1A-br6" firstAttribute="top" secondItem="qQ5-zm-Pto" secondAttribute="bottom" constant="15" id="wbE-fe-6ai"/>
                             <constraint firstItem="maa-tb-tz3" firstAttribute="top" secondItem="H8R-1A-br6" secondAttribute="bottom" constant="15" id="wwI-RK-pGT"/>
                         </constraints>
                     </view>
@@ -426,6 +454,7 @@
                         <outlet property="illuminanceLabel" destination="XGQ-vA-ql3" id="fYW-hs-D5I"/>
                         <outlet property="insideAirCheckLabel" destination="m3O-8G-CGV" id="fbh-I2-hjE"/>
                         <outlet property="insideAirLabel" destination="bqG-EN-shI" id="tZj-KV-1nh"/>
+                        <outlet property="kinderAddressLabel" destination="iha-vK-KEt" id="OuJ-SB-wMg"/>
                         <outlet property="kinderNameLabel" destination="22Z-yH-eze" id="EEL-yF-JTg"/>
                         <outlet property="mapBackView" destination="YQ7-l9-2ty" id="woG-UU-8ZF"/>
                         <outlet property="secondWaterLabel" destination="ja2-3c-SK3" id="SVZ-Iz-T6k"/>

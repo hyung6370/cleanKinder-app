@@ -68,6 +68,7 @@ struct KinderManager {
         case "gn":
             rows = kinderData.childSchoolHygiene_gn?.row
 //            print(kinderData.childSchoolHygiene_gn?.list_total_count)
+//            print(kinderData.childSchoolHygiene_gn?.row[0].)
         case "gd":
             rows = kinderData.childSchoolHygiene_gd?.row
         case "gb":

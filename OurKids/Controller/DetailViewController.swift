@@ -13,6 +13,8 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var kinderNameLabel: UILabel!
     
+    @IBOutlet weak var kinderAddressLabel: UILabel!
+    
     @IBOutlet weak var founderTypeLabel: UILabel!
     
     @IBOutlet weak var insideAirLabel: UILabel!
