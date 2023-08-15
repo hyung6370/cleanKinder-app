@@ -9,11 +9,8 @@ import Foundation
 
 protocol KinderManagerDelegate {
     func didUpdateKinderData(kinder: KinderData, cityCode: String)
-//    func didUpdateTotalCount(count: Int)
     func didFailWithError(error: Error)
 }
-
-
 
 struct KinderManager {
 
@@ -23,7 +20,6 @@ struct KinderManager {
 
     func fetchKinder(cityCode: String) {
         let urlString = "\(kinderURL)\(cityCode)/1/100"
-//        print(urlString)
         performRequest(urlString: urlString, cityCode: cityCode)
     }
 
@@ -71,7 +67,7 @@ struct KinderManager {
         switch cityCode {
         case "gn":
             rows = kinderData.childSchoolHygiene_gn?.row
-            print(kinderData.childSchoolHygiene_gn?.list_total_count)
+//            print(kinderData.childSchoolHygiene_gn?.list_total_count)
         case "gd":
             rows = kinderData.childSchoolHygiene_gd?.row
         case "gb":
@@ -127,12 +123,6 @@ struct KinderManager {
             
         default:
             return
-        }
-        
-        // Common logic
-        for rowItem in rows ?? [] {
-            print(rowItem.KINDERNAME)
-            print(rowItem.ADDR)
         }
     }
 }

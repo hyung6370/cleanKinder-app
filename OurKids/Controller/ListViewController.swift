@@ -163,12 +163,10 @@ extension ListViewController: KinderManagerDelegate {
 
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
         return kinders.count
-        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
