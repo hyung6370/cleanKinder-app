@@ -10,4 +10,6 @@ import Foundation
 struct KinderModel {
     let kinderName: String
     let kinderAddress: String
+    
+
 }

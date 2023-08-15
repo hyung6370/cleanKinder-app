@@ -7,9 +7,19 @@
 
 import Foundation
 
+protocol KinderManagerDelegate {
+    func didUpdateKinderData(kinder: KinderData, cityCode: String)
+//    func didUpdateTotalCount(count: Int)
+    func didFailWithError(error: Error)
+}
+
+
+
 struct KinderManager {
 
     let kinderURL = "http://openapi.seoul.go.kr:8088/64656b41626879753135524477466a/json/childSchoolHygiene_"
+    
+    var delegate: KinderManagerDelegate?
 
     func fetchKinder(cityCode: String) {
         let urlString = "\(kinderURL)\(cityCode)/1/100"
@@ -41,236 +51,88 @@ struct KinderManager {
         }
 
     }
-
+    
     func parseJSON(kinderData: Data, cityCode: String) {
         let decoder = JSONDecoder()
+        
+        do {
+            let kinderDataDecoded = try decoder.decode(KinderData.self, from: kinderData)
+            delegate?.didUpdateKinderData(kinder: kinderDataDecoded, cityCode: cityCode)
+            
+            handleData(for: cityCode, from: kinderDataDecoded)
+        } catch {
+            print(error)
+        }
+    }
 
+    func handleData(for cityCode: String, from kinderData: KinderData) {
+        var rows: [Row]?
+        
         switch cityCode {
         case "gn":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_gn?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_gn?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
+            rows = kinderData.childSchoolHygiene_gn?.row
+            print(kinderData.childSchoolHygiene_gn?.list_total_count)
         case "gd":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_gd?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_gd?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_gd?.row
         case "gb":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_gb?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_gb?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_gb?.row
         case "gs":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_gs?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_gs?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_gs?.row
         case "ga":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_ga?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_ga?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_ga?.row
+            
         case "gj":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_gj?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_gj?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_gj?.row
         case "gr":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_gr?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_gr?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_gr?.row
         case "gc":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_gc?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_gc?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_gc?.row
         case "nw":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_nw?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_nw?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_nw?.row
         case "db":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_db?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_db?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_db?.row
+            
         case "dj":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_dj?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_dj?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_dj?.row
         case "dd":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_dd?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_dd?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_dd?.row
         case "mp":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_mp?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_mp?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_mp?.row
         case "sc":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_sc?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_sc?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_sc?.row
         case "sm":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_sm?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_sm?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_sm?.row
+            
         case "sd":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_sd?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_sd?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_sd?.row
         case "sb":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_sb?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_sb?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_sb?.row
         case "sp":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_sp?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_sp?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_sp?.row
         case "yc":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_yc?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_yc?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_yc?.row
         case "yd":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_yd?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_yd?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_yd?.row
+            
         case "ys":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_ys?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_ys?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_ys?.row
         case "ep":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_ep?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_ep?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_ep?.row
         case "jn":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_jn?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_jn?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_jn?.row
         case "jg":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_jg?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_jg?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
-
+            rows = kinderData.childSchoolHygiene_jg?.row
         case "jr":
-            do {
-                let kinderData = try decoder.decode(KinderData.self, from: kinderData)
-                print(kinderData.childSchoolHygiene_jr?.row[0].KINDERNAME)
-                print(kinderData.childSchoolHygiene_jr?.row[0].ADDR)
-            } catch {
-                print(error)
-            }
+            rows = kinderData.childSchoolHygiene_jr?.row
+            
         default:
-            print("지원하지 않는 도시 코드입니다")
+            return
+        }
+        
+        // Common logic
+        for rowItem in rows ?? [] {
+            print(rowItem.KINDERNAME)
+            print(rowItem.ADDR)
         }
     }
 }

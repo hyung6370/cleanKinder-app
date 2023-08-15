@@ -178,6 +178,7 @@
                         <outlet property="guLabel" destination="QP9-Kg-RYx" id="m0d-BO-ffg"/>
                         <outlet property="guPickerView" destination="cpO-Mx-BGd" id="mP1-sz-kNv"/>
                         <outlet property="guView" destination="bHO-yd-yJ1" id="sbG-CM-sk9"/>
+                        <outlet property="kinderTableView" destination="GkK-m2-cQN" id="YKe-Ix-QnS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgc-6S-QyR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

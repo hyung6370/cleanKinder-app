@@ -11,13 +11,11 @@ class ListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var backView: UIView!
     
-    @IBOutlet weak var kinderNameLabel: UIStackView!
-    @IBOutlet weak var kinderAddressLabel: UIStackView!
+    
+    @IBOutlet weak var kinderNameLabel: UILabel!
+    @IBOutlet weak var kinderAddressLabel: UILabel!
     
     @IBOutlet weak var heartButton: UIButton!
-    
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,4 +28,6 @@ class ListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
 }
+
