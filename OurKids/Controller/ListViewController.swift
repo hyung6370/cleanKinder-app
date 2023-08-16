@@ -47,17 +47,81 @@ class ListViewController: UIViewController {
     }
     
     func initialData() {
-            guLabel.text = guList[0]
-            guPickerView.selectRow(0, inComponent: 0, animated: true)
-            kinderManager.fetchKinder(cityCode: getCityCode(forRow: 0))
-            
+        guLabel.text = guList[0]
+        guPickerView.selectRow(0, inComponent: 0, animated: true)
+        kinderManager.fetchKinder(cityCode: getCityCode(forRow: 0))
+        
         kinderTableView.separatorColor = UIColor(hexCode: "ff7b00")
-        }
+    }
     
     func getCityCode(forRow row: Int) -> String {
 
         let cityCodes: [String] = ["gn", "gd", "gb", "gs", "ga", "gj", "gr", "gc", "nw", "db", "dj", "dd", "mp", "sc", "sm", "sd", "sb", "sp", "yc", "yd", "ys", "ep", "jn", "jg", "jr"]
         return cityCodes[row]
+    }
+    
+    func calculateInsideAir(for insideAirDate: String?) -> UIColor {
+        guard let insideAirDateStr = insideAirDate, let insideAirDateInt = Int(insideAirDateStr) else {
+            return UIColor(hexCode: "ff5c82")
+        }
+        
+        if insideAirDateInt >= 20230101 {
+            return UIColor(hexCode: "00e1ff")
+        }
+        else if insideAirDateInt >= 20220101 && insideAirDateInt < 20230101 {
+            return UIColor(hexCode: "ffb300")
+        }
+        else {
+            return UIColor(hexCode: "ff5c82")
+        }
+    }
+    
+    func calculateDisinfection(for disinfectionDate: String?) -> UIColor {
+        guard let disinfectionDateStr = disinfectionDate, let disinfectionDateInt = Int(disinfectionDateStr) else {
+            return UIColor(hexCode: "ff5c82")
+        }
+        
+        if disinfectionDateInt >= 20230101 {
+            return UIColor(hexCode: "00e1ff")
+        }
+        else if disinfectionDateInt >= 20220101 && disinfectionDateInt < 20230101 {
+            return UIColor(hexCode: "ffb300")
+        }
+        else {
+            return UIColor(hexCode: "ff5c82")
+        }
+    }
+    
+    func calculateIlluminance(for illuminanceDate: String?) -> UIColor {
+        guard let illuminanceDateStr = illuminanceDate, let illuminanceDateInt = Int(illuminanceDateStr) else {
+            return UIColor(hexCode: "ff5c82")
+        }
+        
+        if illuminanceDateInt >= 20230101 {
+            return UIColor(hexCode: "00e1ff")
+        }
+        else if illuminanceDateInt >= 20220101 && illuminanceDateInt < 20230101 {
+            return UIColor(hexCode: "ffb300")
+        }
+        else {
+            return UIColor(hexCode: "ff5c82")
+        }
+    }
+    
+    func calculateDust(for dustDate: String?) -> UIColor {
+        guard let dustDateStr = dustDate, let dustDateInt = Int(dustDateStr) else {
+            return UIColor(hexCode: "ff5c82")
+        }
+        
+        if dustDateInt >= 20230101 {
+            return UIColor(hexCode: "00e1ff")
+        }
+        else if dustDateInt >= 20220101 && dustDateInt < 20230101 {
+            return UIColor(hexCode: "ffb300")
+        }
+        else {
+            return UIColor(hexCode: "ff5c82")
+        }
     }
 }
 
@@ -118,7 +182,6 @@ extension ListViewController: KinderManagerDelegate {
             let newKinder = KinderModel(kinderName: name, kinderAddress: address, founderType: founderType, insideAir: insideAir, insideAirCheck: insideAirCheck, disinfection: disinfection, disinfectionCheck: disinfectionCheck, illuminanceDate: illuminanceDate, illuminanceDateCheck: illuminanceDateCheck, dustDate: dustDate, dustDateCheck: dustDateCheck, firstWater: firstWater, secondWater: secondWater, thirdWater: thirdWater)
             kinders.append(newKinder)
         }
-//        print(kinders.count)
         DispatchQueue.main.async {
             self.kinderTableView.reloadData()
         }
@@ -206,6 +269,18 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         let kinder = kinders[indexPath.row]
         cell.kinderNameLabel.text = kinder.kinderName
         cell.kinderAddressLabel.text = kinder.kinderAddress
+        
+        
+        let insideAirColor = calculateInsideAir(for: kinder.insideAir)
+        let disinfectionColor = calculateDisinfection(for: kinder.disinfection)
+        let illuminanceColor = calculateIlluminance(for: kinder.illuminanceDate)
+        let dustColor = calculateDust(for: kinder.dustDate)
+        
+        cell.insideAirImageVIew.backgroundColor = insideAirColor
+        cell.deinfectionImageView.backgroundColor = disinfectionColor
+        cell.illuminanceImageView.backgroundColor = illuminanceColor
+        cell.dustImageView.backgroundColor = dustColor
+        
         
         return cell
     }

@@ -47,19 +47,22 @@ class DetailViewController: UIViewController {
             kinderNameLabel.text = kinder.kinderName
             kinderAddressLabel.text = kinder.kinderAddress
             founderTypeLabel.text = kinder.founderType
+            
             insideAirLabel.text = kinder.insideAir
             insideAirCheckLabel.text = kinder.insideAirCheck
+            
             disinfectionLabel.text = kinder.disinfection
             disinfectionCheckLabel.text = kinder.disinfectionCheck
+            
             illuminanceLabel.text = kinder.illuminanceDate
             illuminanceDateLabel.text = kinder.illuminanceDateCheck
+            
             dustLabel.text = kinder.dustDate
             dustDateLabel.text = kinder.dustDateCheck
+            
             firstWaterLabel.text = kinder.firstWater
             secondWaterLabel.text = kinder.secondWater
             thirdWaterLabel.text = kinder.thirdWater
         }
     }
-    
-
 }

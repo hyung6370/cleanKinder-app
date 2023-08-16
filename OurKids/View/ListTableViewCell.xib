@@ -183,7 +183,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backView" destination="61A-dd-tH9" id="OAa-Ke-otK"/>
+                <outlet property="deinfectionImageView" destination="7Yj-9L-5AD" id="Ry5-Fz-kBc"/>
+                <outlet property="dustImageView" destination="enA-ec-lyZ" id="On9-kz-1ra"/>
                 <outlet property="heartButton" destination="ymU-oM-DK8" id="Gm2-ex-r1S"/>
+                <outlet property="illuminanceImageView" destination="XQX-WV-gGV" id="G0k-3r-Ivo"/>
+                <outlet property="insideAirImageVIew" destination="Dbc-fq-XPa" id="QeG-QP-9ng"/>
                 <outlet property="kinderAddressLabel" destination="Snj-aH-Faq" id="bdm-H6-PPe"/>
                 <outlet property="kinderNameLabel" destination="bkQ-8O-FpB" id="H9J-yl-8LB"/>
             </connections>
