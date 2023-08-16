@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class DetailViewController: UIViewController {
     
@@ -33,13 +34,47 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var secondWaterLabel: UILabel!
     @IBOutlet weak var thirdWaterLabel: UILabel!
     
+    private var mapView: GMSMapView!
+    
     var kinderDetail: KinderModel?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupGoogleMaps()
         fetchData()
+    }
+    
+    func setupGoogleMaps() {
+        let camera = GMSCameraPosition.camera(withLatitude: 0, longitude: 0, zoom: 16.0)
+        mapView = GMSMapView.map(withFrame: self.mapBackView.bounds, camera: camera)
+        self.mapBackView.addSubview(mapView)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        mapView.settings.myLocationButton = true
+//        mapView.isMyLocationEnabled = true
+        mapView.settings.scrollGestures = true
+        mapView.settings.zoomGestures = false
+        mapView.settings.setAllGesturesEnabled(true)
+        
+    }
+    
+    func updateMapWithAddress(address: String) {
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            guard let placemark = placemarks?.first, let location = placemark.location else {
+                print("Error fetching coordinates for address: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            
+            let coordinate = location.coordinate
+            let camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 16.0)
+            self.mapView.camera = camera
+            let marker = GMSMarker(position: coordinate)
+            marker.map = self.mapView
+        }
     }
     
     func fetchData() {
@@ -63,6 +98,10 @@ class DetailViewController: UIViewController {
             firstWaterLabel.text = kinder.firstWater
             secondWaterLabel.text = kinder.secondWater
             thirdWaterLabel.text = kinder.thirdWater
+            
+            updateMapWithAddress(address: kinder.kinderAddress)
         }
     }
+    
+    
 }

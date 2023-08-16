@@ -48,6 +48,7 @@
 		BD3272252A851EE4008FACAB /* GmarketSansTTFBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFBold.ttf; sourceTree = "<group>"; };
 		BD3272292A852766008FACAB /* homeKid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homeKid.json; sourceTree = "<group>"; };
 		BD6C077F2A8C99EF00E1F369 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BD6C07822A8CA94900E1F369 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		BDA61FDD2A86195A000B57DC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		BDA61FDF2A861972000B57DC /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		BDA61FE12A861B3D000B57DC /* KinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderModel.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		BD3271FF2A851E93008FACAB = {
 			isa = PBXGroup;
 			children = (
+				BD6C07822A8CA94900E1F369 /* Secrets.xcconfig */,
 				BD6C077F2A8C99EF00E1F369 /* .gitignore */,
 				BD32720A2A851E93008FACAB /* OurKids */,
 				BD3272292A852766008FACAB /* homeKid.json */,

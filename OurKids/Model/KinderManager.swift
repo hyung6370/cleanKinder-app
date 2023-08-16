@@ -15,7 +15,7 @@ protocol KinderManagerDelegate {
 struct KinderManager {
 
     let kinderURL = "http://openapi.seoul.go.kr:8088/64656b41626879753135524477466a/json/childSchoolHygiene_"
-    
+
     var delegate: KinderManagerDelegate?
 
     func fetchKinder(cityCode: String) {
@@ -128,5 +128,4 @@ struct KinderManager {
         }
     }
 }
-
 

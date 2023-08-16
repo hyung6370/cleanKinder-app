@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let GOOGLE_MAPS_KEY = Bundle.main.apiKey
+        
+        GMSServices.provideAPIKey("GOOGLE_MAPS_KEY")
+        
         return true
     }
 
@@ -79,3 +85,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension Bundle {
+    
+    var apiKey: String {
+        guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist"),
+              let plistDict = NSDictionary(contentsOfFile: filePath) else {
+            fatalError("Couldn't find file 'SecureAPIKeys.plist'.")
+        }
+        
+        guard let value = plistDict.object(forKey: "GOOGLE_MAPS_KEY") as? String else {
+            fatalError("Couldn't find key 'GOOGLE_MAPS_KEY' in 'SecureAPIKeys.plist'.")
+        }
+        
+        return value
+    }
+}

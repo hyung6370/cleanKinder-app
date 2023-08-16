@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SEOUL_SQUARE_KEY</key>
+	<string>$(SEOUL_SQUARE_KEY)</string>
+	<key>GOOGLE_MAPS_KEY</key>
+	<string>$(GOOGLE_MAPS_KEY)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>GmarketSansTTFBold.ttf</string>
@@ -27,17 +31,16 @@
 			</array>
 		</dict>
 	</dict>
-
 	<key>NSAppTransportSecurity</key>
 	<dict>
-   		<key>NSExceptionDomains</key>
-    		<dict>
-        		<key>openapi.seoul.go.kr</key>
-        		<dict>
-            			<key>NSExceptionAllowsInsecureHTTPLoads</key>
-            			<true/>
-        		</dict>
-    		</dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>openapi.seoul.go.kr</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
 	</dict>
 </dict>
 </plist>
