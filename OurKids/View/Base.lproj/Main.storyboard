@@ -29,40 +29,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Lp-my-riK">
-                                <rect key="frame" x="40" y="101.33333333333333" width="266" height="206.66666666666669"/>
+                                <rect key="frame" x="40" y="128" width="292.66666666666669" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMx-4Y-ajG">
-                                        <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="29.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="25"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울시 내 모든 유치원 위생" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbu-GG-orM">
-                                        <rect key="frame" x="0.0" y="34.333333333333329" width="266" height="29.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="30" width="292.66666666666669" height="25"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환경을 색깔로 한 눈에 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df0-If-PjE">
-                                        <rect key="frame" x="0.0" y="68.666666666666671" width="266" height="29.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="60" width="292.66666666666669" height="25"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할 수 있는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pns-Ld-4Gt">
-                                        <rect key="frame" x="0.0" y="103.00000000000001" width="100.66666666666667" height="29.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="90" width="110.33333333333333" height="25"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리아이의 유치원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmV-K2-1VB">
-                                        <rect key="frame" x="0.0" y="137.33333333333331" width="216" height="35"/>
+                                        <rect key="frame" x="0.0" y="120" width="239.33333333333334" height="30"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="30"/>
                                         <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbe-ZP-nTS">
-                                        <rect key="frame" x="0.0" y="177.33333333333337" width="71.666666666666671" height="29.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="155" width="77.666666666666671" height="25"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

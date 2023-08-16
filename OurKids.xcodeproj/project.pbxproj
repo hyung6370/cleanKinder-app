@@ -20,6 +20,7 @@
 		BD3272272A851EE4008FACAB /* GmarketSansTTFMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD3272242A851EE4008FACAB /* GmarketSansTTFMedium.ttf */; };
 		BD3272282A851EE4008FACAB /* GmarketSansTTFBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD3272252A851EE4008FACAB /* GmarketSansTTFBold.ttf */; };
 		BD32722A2A852766008FACAB /* homeKid.json in Resources */ = {isa = PBXBuildFile; fileRef = BD3272292A852766008FACAB /* homeKid.json */; };
+		BD6C07802A8C99EF00E1F369 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BD6C077F2A8C99EF00E1F369 /* .gitignore */; };
 		BDA61FDE2A86195A000B57DC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FDD2A86195A000B57DC /* ListViewController.swift */; };
 		BDA61FE02A861972000B57DC /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FDF2A861972000B57DC /* FavoriteViewController.swift */; };
 		BDA61FE22A861B3D000B57DC /* KinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FE12A861B3D000B57DC /* KinderModel.swift */; };
@@ -46,6 +47,7 @@
 		BD3272242A851EE4008FACAB /* GmarketSansTTFMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFMedium.ttf; sourceTree = "<group>"; };
 		BD3272252A851EE4008FACAB /* GmarketSansTTFBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFBold.ttf; sourceTree = "<group>"; };
 		BD3272292A852766008FACAB /* homeKid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homeKid.json; sourceTree = "<group>"; };
+		BD6C077F2A8C99EF00E1F369 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BDA61FDD2A86195A000B57DC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		BDA61FDF2A861972000B57DC /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		BDA61FE12A861B3D000B57DC /* KinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderModel.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		BD3271FF2A851E93008FACAB = {
 			isa = PBXGroup;
 			children = (
+				BD6C077F2A8C99EF00E1F369 /* .gitignore */,
 				BD32720A2A851E93008FACAB /* OurKids */,
 				BD3272292A852766008FACAB /* homeKid.json */,
 				BD3272092A851E93008FACAB /* Products */,
@@ -174,6 +177,7 @@
 				BD3272052A851E93008FACAB /* Frameworks */,
 				BD3272062A851E93008FACAB /* Resources */,
 				62A67FCFD825A1506F4A250B /* [CP] Embed Pods Frameworks */,
+				6673934DB8FEF74B4F0D6989 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,6 +233,7 @@
 				BD3272132A851E93008FACAB /* Main.storyboard in Resources */,
 				BDB46DA02A89FB0A00B5FCBE /* ListTableViewCell.xib in Resources */,
 				BD3272272A851EE4008FACAB /* GmarketSansTTFMedium.ttf in Resources */,
+				BD6C07802A8C99EF00E1F369 /* .gitignore in Resources */,
 				BD3272282A851EE4008FACAB /* GmarketSansTTFBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +278,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OurKids/Pods-OurKids-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6673934DB8FEF74B4F0D6989 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OurKids/Pods-OurKids-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OurKids/Pods-OurKids-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OurKids/Pods-OurKids-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -1,20 +1,47 @@
 PODS:
   - CRPickerButton (1.0.1)
+  - Google-Maps-iOS-Utils (3.4.0):
+    - Google-Maps-iOS-Utils/Clustering (= 3.4.0)
+    - Google-Maps-iOS-Utils/Geometry (= 3.4.0)
+    - Google-Maps-iOS-Utils/Heatmap (= 3.4.0)
+    - Google-Maps-iOS-Utils/QuadTree (= 3.4.0)
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Clustering (3.4.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Geometry (3.4.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Heatmap (3.4.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/QuadTree (3.4.0):
+    - GoogleMaps
+  - GoogleMaps (6.1.0):
+    - GoogleMaps/Maps (= 6.1.0)
+  - GoogleMaps/Base (6.1.0)
+  - GoogleMaps/Maps (6.1.0):
+    - GoogleMaps/Base
   - lottie-ios (4.2.0)
 
 DEPENDENCIES:
   - CRPickerButton
+  - Google-Maps-iOS-Utils (= 3.4.0)
+  - GoogleMaps (= 6.1.0)
   - lottie-ios
 
 SPEC REPOS:
   trunk:
     - CRPickerButton
+    - Google-Maps-iOS-Utils
+    - GoogleMaps
     - lottie-ios
 
 SPEC CHECKSUMS:
   CRPickerButton: 7feefbe0b5b972b9a342c36e498432e8502504b0
+  Google-Maps-iOS-Utils: 2b4971019b7e9b3c92b4635d218552d9e093df4b
+  GoogleMaps: cffc5d24ce920063aaeebe6ac4dbaaca1dd7f377
   lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
 
-PODFILE CHECKSUM: 7b33fd87b70d443c96db965927e90bb6c83c1767
+PODFILE CHECKSUM: 92f914c1e68c75e1fd9ed48d4413c94a2ea0a906
 
 COCOAPODS: 1.12.1
