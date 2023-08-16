@@ -5,9 +5,6 @@
       location = "group:OurKids.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/.gitignore">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
