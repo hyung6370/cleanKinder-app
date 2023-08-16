@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ListTableViewCellDelegate: AnyObject {
+    func didTapHeartButton(at indexPath: IndexPath)
+}
+
 class ListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var backView: UIView!
@@ -20,6 +24,23 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var dustImageView: UIImageView!
     @IBOutlet weak var deinfectionImageView: UIImageView!
     @IBOutlet weak var illuminanceImageView: UIImageView!
+    
+    weak var delegate: ListTableViewCellDelegate?
+    
+    var isTouched: Bool? {
+        didSet {
+            if isTouched == true {
+                heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                heartButton.tintColor = UIColor.red
+            }
+            else {
+                heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
+                heartButton.tintColor = UIColor.lightGray
+            }
+            guard let indexPath = getCurrentIndexPath() else { return }
+            delegate?.didTapHeartButton(at: indexPath)
+        }
+    }
     
     
     override func awakeFromNib() {
@@ -47,7 +68,28 @@ class ListTableViewCell: UITableViewCell {
         illuminanceImageView.layer.cornerRadius = 7
         illuminanceImageView.clipsToBounds = true
     }
+
     
+    
+    @IBAction func heartButtonTapped(_ sender: UIButton) {
+        if heartButton.imageView?.image == UIImage(systemName: "heart") {
+            heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            heartButton.tintColor = UIColor.red
+        }
+        else {
+            heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            heartButton.tintColor = UIColor.lightGray
+        }
+        
+        guard let indexPath = getCurrentIndexPath() else { return }
+        delegate?.didTapHeartButton(at: indexPath)
+    }
+    
+
+    private func getCurrentIndexPath() -> IndexPath? {
+        guard let superView = self.superview as? UITableView else { return nil }
+        return superView.indexPath(for: self)
+    }
     
 }
 

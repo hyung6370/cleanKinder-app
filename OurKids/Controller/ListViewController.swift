@@ -18,6 +18,7 @@ class ListViewController: UIViewController {
     var kinderManager = KinderManager()
     
     var kinders: [KinderModel] = []
+    var favKinders: [KinderModel] = []
     
     var guList: [String] = ["강남구", "강동구", "강북구", "강서구", "관악구", "광진구", "구로구", "금천구", "노원구", "도봉구", "동작구", "동대문구", "마포구", "서초구", "서대문구", "성동구", "성북구", "송파구", "양천구", "영등포구", "용산구", "은평구", "종로구", "중구", "중랑구"]
 
@@ -60,68 +61,34 @@ class ListViewController: UIViewController {
         return cityCodes[row]
     }
     
-    func calculateInsideAir(for insideAirDate: String?) -> UIColor {
-        guard let insideAirDateStr = insideAirDate, let insideAirDateInt = Int(insideAirDateStr) else {
-            return UIColor(hexCode: "ff5c82")
+    func colorForDate(_ date: String?) -> UIColor {
+        guard let dateStr = date, let dateInt = Int(dateStr) else {
+                return UIColor(hexCode: "ff5c82")
         }
         
-        if insideAirDateInt >= 20230101 {
+        if dateInt >= 20230101 {
             return UIColor(hexCode: "00e1ff")
-        }
-        else if insideAirDateInt >= 20220101 && insideAirDateInt < 20230101 {
+        } else if dateInt >= 20220101 && dateInt < 20230101 {
             return UIColor(hexCode: "ffb300")
-        }
-        else {
+        } else {
             return UIColor(hexCode: "ff5c82")
         }
+    }
+    
+    func calculateInsideAir(for insideAirDate: String?) -> UIColor {
+        return colorForDate(insideAirDate)
     }
     
     func calculateDisinfection(for disinfectionDate: String?) -> UIColor {
-        guard let disinfectionDateStr = disinfectionDate, let disinfectionDateInt = Int(disinfectionDateStr) else {
-            return UIColor(hexCode: "ff5c82")
-        }
-        
-        if disinfectionDateInt >= 20230101 {
-            return UIColor(hexCode: "00e1ff")
-        }
-        else if disinfectionDateInt >= 20220101 && disinfectionDateInt < 20230101 {
-            return UIColor(hexCode: "ffb300")
-        }
-        else {
-            return UIColor(hexCode: "ff5c82")
-        }
+        return colorForDate(disinfectionDate)
     }
-    
+
     func calculateIlluminance(for illuminanceDate: String?) -> UIColor {
-        guard let illuminanceDateStr = illuminanceDate, let illuminanceDateInt = Int(illuminanceDateStr) else {
-            return UIColor(hexCode: "ff5c82")
-        }
-        
-        if illuminanceDateInt >= 20230101 {
-            return UIColor(hexCode: "00e1ff")
-        }
-        else if illuminanceDateInt >= 20220101 && illuminanceDateInt < 20230101 {
-            return UIColor(hexCode: "ffb300")
-        }
-        else {
-            return UIColor(hexCode: "ff5c82")
-        }
+        return colorForDate(illuminanceDate)
     }
-    
+
     func calculateDust(for dustDate: String?) -> UIColor {
-        guard let dustDateStr = dustDate, let dustDateInt = Int(dustDateStr) else {
-            return UIColor(hexCode: "ff5c82")
-        }
-        
-        if dustDateInt >= 20230101 {
-            return UIColor(hexCode: "00e1ff")
-        }
-        else if dustDateInt >= 20220101 && dustDateInt < 20230101 {
-            return UIColor(hexCode: "ffb300")
-        }
-        else {
-            return UIColor(hexCode: "ff5c82")
-        }
+        return colorForDate(dustDate)
     }
 }
 
@@ -281,8 +248,35 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.illuminanceImageView.backgroundColor = illuminanceColor
         cell.dustImageView.backgroundColor = dustColor
         
+        cell.delegate = self
+        
+        if favKinders.contains(where: { $0.kinderName == kinder.kinderName }) {
+            cell.isTouched = true
+        }
+        else {
+            cell.isTouched = false
+        }
         
         return cell
+    }
+}
+
+extension ListViewController: ListTableViewCellDelegate {
+    func didTapHeartButton(at indexPath: IndexPath) {
+        let selectedKinder = kinders[indexPath.row]
+                
+        if let index = favKinders.firstIndex(where: { $0.kinderName == selectedKinder.kinderName }) {
+            print("Found kinder at index \(index)")
+            favKinders.remove(at: index)
+            print("삭제 완료")
+        }
+        else {
+            favKinders.append(selectedKinder)
+
+            if let favKinder = favKinders.last {
+                print("\(favKinder.kinderName) 추가")
+            }
+        }
     }
 }
 

@@ -31,4 +31,5 @@ struct KinderModel {
     let secondWater: String
     let thirdWater: String
     
+    
 }
