@@ -192,8 +192,8 @@ struct Row: Codable {
     
     let MDST_CHK_DT: String   // 미세먼지 검사일자
     let MDST_CHK_RSLT_CD: String   // 미세먼지 검사결과
-    let ILMN_CHK_DT: String
-    let ILMN_CHK_RSLT_CD: String
+    let ILMN_CHK_DT: String  // 조도관리 검사일자
+    let ILMN_CHK_RSLT_CD: String  // 조도관리 검사결과
     let PBNTTMNG: String
     
     let ADDR: String   // 주소

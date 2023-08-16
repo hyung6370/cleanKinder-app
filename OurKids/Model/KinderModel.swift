@@ -18,12 +18,14 @@ struct KinderModel {
     let insideAir: String
     let insideAirCheck: String
     
-    let disinfectionLabel: String
-    let disinfectionCheckLabel: String
+    let disinfection: String
+    let disinfectionCheck: String
     
     let illuminanceDate: String
+    let illuminanceDateCheck: String
     
     let dustDate: String
+    let dustDateCheck: String
     
     let firstWater: String
     let secondWater: String

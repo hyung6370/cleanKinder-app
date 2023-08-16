@@ -97,10 +97,28 @@ extension ListViewController: KinderManagerDelegate {
         for rowItem in validRows {
             let name = rowItem.KINDERNAME
             let address = rowItem.ADDR
-            let newKinder = KinderModel(kinderName: name, kinderAddress: address)
+            let founderType = rowItem.ESTB_PT
+            
+            let insideAir = rowItem.ARQL_CHK_DT
+            let insideAirCheck = rowItem.ARQL_CHK_RSLT_TP_CD
+            
+            let disinfection = rowItem.FXTM_DSNF_CHK_DT
+            let disinfectionCheck = rowItem.FXTM_DSNF_CHK_RSLT_TP_CD
+            
+            let illuminanceDate = rowItem.ILMN_CHK_DT
+            let illuminanceDateCheck = rowItem.ILMN_CHK_RSLT_CD
+            
+            let dustDate = rowItem.MDST_CHK_DT
+            let dustDateCheck = rowItem.MDST_CHK_RSLT_CD
+            
+            let firstWater = rowItem.TP_01
+            let secondWater = rowItem.TP_02
+            let thirdWater = rowItem.TP_03
+            
+            let newKinder = KinderModel(kinderName: name, kinderAddress: address, founderType: founderType, insideAir: insideAir, insideAirCheck: insideAirCheck, disinfection: disinfection, disinfectionCheck: disinfectionCheck, illuminanceDate: illuminanceDate, illuminanceDateCheck: illuminanceDateCheck, dustDate: dustDate, dustDateCheck: dustDateCheck, firstWater: firstWater, secondWater: secondWater, thirdWater: thirdWater)
             kinders.append(newKinder)
         }
-        print(kinders.count)
+//        print(kinders.count)
         DispatchQueue.main.async {
             self.kinderTableView.reloadData()
         }
@@ -220,6 +238,8 @@ extension ListViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
+            
+            detailVC.kinderDetail = kinders[indexPath.row]
             
             self.navigationController?.pushViewController(detailVC, animated: true)
         }

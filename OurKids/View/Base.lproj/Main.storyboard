@@ -324,7 +324,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qQ5-zm-Pto" userLabel="Illuminance Stack View">
-                                <rect key="frame" x="15" y="663" width="215.66666666666666" height="18"/>
+                                <rect key="frame" x="15" y="663" width="286.66666666666669" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조도관리 검사일자 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-rp-z3c">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
@@ -338,10 +338,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPq-P1-K7l">
+                                        <rect key="frame" x="220.66666666666666" y="0.0" width="9.3333333333333428" height="18"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2r-Jp-Hrw">
+                                        <rect key="frame" x="234.99999999999997" y="0.0" width="51.666666666666657" height="18"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-1A-br6" userLabel="Dust Stack View">
-                                <rect key="frame" x="15" y="696" width="215.66666666666666" height="18"/>
+                                <rect key="frame" x="15" y="696" width="286.66666666666669" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지 검사일자 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZF-hQ-QW5">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
@@ -351,6 +363,18 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-DH-2z5">
                                         <rect key="frame" x="164" y="0.0" width="51.666666666666657" height="18"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fx-mu-ef1">
+                                        <rect key="frame" x="220.66666666666666" y="0.0" width="9.3333333333333428" height="18"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDe-WX-ouL">
+                                        <rect key="frame" x="234.99999999999997" y="0.0" width="51.666666666666657" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -448,9 +472,11 @@
                     <connections>
                         <outlet property="disinfectionCheckLabel" destination="IaC-jF-6dj" id="E1b-mR-WKn"/>
                         <outlet property="disinfectionLabel" destination="183-1g-2RO" id="Fx2-cg-1fG"/>
+                        <outlet property="dustDateLabel" destination="RDe-WX-ouL" id="1Q9-2M-zZx"/>
                         <outlet property="dustLabel" destination="M5g-DH-2z5" id="8iL-g6-0kz"/>
                         <outlet property="firstWaterLabel" destination="BFX-aJ-dEN" id="1i0-v1-xPz"/>
                         <outlet property="founderTypeLabel" destination="rhQ-cU-V7h" id="A1f-h4-h8y"/>
+                        <outlet property="illuminanceDateLabel" destination="W2r-Jp-Hrw" id="uGp-FJ-4Rm"/>
                         <outlet property="illuminanceLabel" destination="XGQ-vA-ql3" id="fYW-hs-D5I"/>
                         <outlet property="insideAirCheckLabel" destination="m3O-8G-CGV" id="fbh-I2-hjE"/>
                         <outlet property="insideAirLabel" destination="bqG-EN-shI" id="tZj-KV-1nh"/>
