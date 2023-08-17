@@ -44,6 +44,15 @@ class DetailViewController: UIViewController {
 
         setupGoogleMaps()
         fetchData()
+        configureUI()
+    }
+    
+    func configureUI() {
+        mapBackView.layer.borderWidth = 1.5
+        mapBackView.layer.borderColor = UIColor.systemYellow.cgColor
+        mapBackView.layer.cornerRadius = 15
+        mapBackView.clipsToBounds = true
+        
     }
     
     func setupGoogleMaps() {

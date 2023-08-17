@@ -26,6 +26,8 @@
 		BDA61FE22A861B3D000B57DC /* KinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FE12A861B3D000B57DC /* KinderModel.swift */; };
 		BDA61FE42A861B49000B57DC /* KinderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FE32A861B49000B57DC /* KinderData.swift */; };
 		BDA61FE62A861B52000B57DC /* KinderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FE52A861B52000B57DC /* KinderManager.swift */; };
+		BDAE09F22A8DB9E0000AE805 /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE09F02A8DB9E0000AE805 /* FavTableViewCell.swift */; };
+		BDAE09F32A8DB9E0000AE805 /* FavTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDAE09F12A8DB9E0000AE805 /* FavTableViewCell.xib */; };
 		BDB46D9F2A89FB0A00B5FCBE /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB46D9D2A89FB0A00B5FCBE /* ListTableViewCell.swift */; };
 		BDB46DA02A89FB0A00B5FCBE /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDB46D9E2A89FB0A00B5FCBE /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		BDA61FE12A861B3D000B57DC /* KinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderModel.swift; sourceTree = "<group>"; };
 		BDA61FE32A861B49000B57DC /* KinderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderData.swift; sourceTree = "<group>"; };
 		BDA61FE52A861B52000B57DC /* KinderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderManager.swift; sourceTree = "<group>"; };
+		BDAE09F02A8DB9E0000AE805 /* FavTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
+		BDAE09F12A8DB9E0000AE805 /* FavTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavTableViewCell.xib; sourceTree = "<group>"; };
 		BDB46D9D2A89FB0A00B5FCBE /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		BDB46D9E2A89FB0A00B5FCBE /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		F45B84FED357650760A52423 /* Pods-OurKids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurKids.debug.xcconfig"; path = "Target Support Files/Pods-OurKids/Pods-OurKids.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				BD3272112A851E93008FACAB /* Main.storyboard */,
 				BDB46D9D2A89FB0A00B5FCBE /* ListTableViewCell.swift */,
 				BDB46D9E2A89FB0A00B5FCBE /* ListTableViewCell.xib */,
+				BDAE09F02A8DB9E0000AE805 /* FavTableViewCell.swift */,
+				BDAE09F12A8DB9E0000AE805 /* FavTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				BD3272132A851E93008FACAB /* Main.storyboard in Resources */,
 				BDB46DA02A89FB0A00B5FCBE /* ListTableViewCell.xib in Resources */,
 				BD3272272A851EE4008FACAB /* GmarketSansTTFMedium.ttf in Resources */,
+				BDAE09F32A8DB9E0000AE805 /* FavTableViewCell.xib in Resources */,
 				BD6C07802A8C99EF00E1F369 /* .gitignore in Resources */,
 				BD3272282A851EE4008FACAB /* GmarketSansTTFBold.ttf in Resources */,
 			);
@@ -311,6 +318,7 @@
 				BDA61FE22A861B3D000B57DC /* KinderModel.swift in Sources */,
 				BDA61FE42A861B49000B57DC /* KinderData.swift in Sources */,
 				BDA61FE62A861B52000B57DC /* KinderManager.swift in Sources */,
+				BDAE09F22A8DB9E0000AE805 /* FavTableViewCell.swift in Sources */,
 				BD3272162A851E93008FACAB /* OurKids.xcdatamodeld in Sources */,
 				BD32720C2A851E93008FACAB /* AppDelegate.swift in Sources */,
 				BDA61FDE2A86195A000B57DC /* ListViewController.swift in Sources */,

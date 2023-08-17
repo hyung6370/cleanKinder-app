@@ -206,7 +206,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유치원명 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPu-4s-LfS">
                                         <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22Z-yH-eze">
@@ -223,7 +223,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K03-NV-xrQ">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iha-vK-KEt">
@@ -240,7 +240,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="설립 유형 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZi-pN-7AB">
                                         <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhQ-cU-V7h">
@@ -257,7 +257,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="실내 공기 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPb-Mt-wN8">
                                         <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-JZ-uFk">
@@ -291,7 +291,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정기 소독 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5N-MY-9qt">
                                         <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="17"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="xU4-rV-wxo">
@@ -329,7 +329,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조도관리 검사일자 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-rp-z3c">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGQ-vA-ql3">
@@ -358,7 +358,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지 검사일자 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZF-hQ-QW5">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-DH-2z5">
@@ -387,7 +387,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생수/정수기/상수도 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bze-E3-9dY">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="18"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.68324097890000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-73-vZt">
@@ -441,7 +441,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IuD-hB-lqi"/>
-                        <color key="backgroundColor" red="0.99233597520000005" green="0.97982758280000004" blue="0.78985393049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="s6G-ju-OhP" firstAttribute="leading" secondItem="IuD-hB-lqi" secondAttribute="leading" constant="15" id="4Yw-MJ-snm"/>
                             <constraint firstItem="Qff-MY-EgT" firstAttribute="top" secondItem="s6G-ju-OhP" secondAttribute="bottom" constant="15" id="Agm-RT-m9K"/>
@@ -489,12 +489,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBK-h8-brI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3791.6030534351144" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="3709" y="361"/>
         </scene>
         <!--즐겨찾기-->
         <scene sceneID="hxv-Ge-KHB">
             <objects>
-                <viewController id="LLL-R0-Fpn" customClass="FavoriteViewController" customModule="OurKids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavVC" id="LLL-R0-Fpn" customClass="FavoriteViewController" customModule="OurKids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="21H-YB-i9P">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,7 +538,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="hwN-Z3-RtD">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TPc-Uv-6AW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TapBarController" automaticallyAdjustsScrollViewInsets="NO" id="TPc-Uv-6AW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="aTH-qn-gL4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b46-cS-kv5">

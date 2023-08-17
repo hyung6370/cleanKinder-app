@@ -90,6 +90,16 @@ class ListViewController: UIViewController {
     func calculateDust(for dustDate: String?) -> UIColor {
         return colorForDate(dustDate)
     }
+    
+    
+//    func moveToFavoriteVC() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//        if let favoriteVC = storyboard.instantiateViewController(identifier: "FavVC") as? FavoriteViewController {
+//            favoriteVC.favKinders = self.favKinders
+////            self.navigationController?.pushViewController(favoriteVC, animated: true)
+//        }
+//    }
 }
 
 extension ListViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -275,7 +285,15 @@ extension ListViewController: ListTableViewCellDelegate {
 
             if let favKinder = favKinders.last {
                 print("\(favKinder.kinderName) 추가")
+                print(favKinders)
             }
+        }
+        
+        // UITabBarController의 자식 ViewControllers에 직접 접근하여 데이터를 설정
+        if let tabBarController = self.tabBarController,
+           let viewControllers = tabBarController.viewControllers,
+           let favoriteVC = viewControllers[1] as? FavoriteViewController {
+            favoriteVC.favKinders = self.favKinders
         }
     }
 }
@@ -300,7 +318,6 @@ extension UIColor {
                   alpha: alpha)
     }
 }
-
 
 extension ListViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
