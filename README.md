@@ -17,14 +17,24 @@
 <br /><br /><hr />
 
 ### 📌 화면 구성📱
-|화면 1|화면 2|
-|---|---|
-|![simulator_screenshot_551F36A2-A85F-4FDD-8068-02128E355F7C](https://github.com/hyung6370/cleanKinder-app/assets/81064963/9341d5b7-5aae-413a-8bce-2917faa03687)|![simulator_screenshot_0DB2E5C7-C9F2-4770-B294-5A4B60A2DF54](https://github.com/hyung6370/cleanKinder-app/assets/81064963/6bf5cbcb-5453-4369-916b-c5fe9502f167)|
+|홈|유치원 리스트|상세 페이지|유치원 저장 페이지|
+|---|---|---|---|
+|![simulator_screenshot_551F36A2-A85F-4FDD-8068-02128E355F7C](https://github.com/hyung6370/cleanKinder-app/assets/81064963/9341d5b7-5aae-413a-8bce-2917faa03687)|![simulator_screenshot_5C439D97-7233-4573-9F59-DC6E22AF7884](https://github.com/hyung6370/cleanKinder-app/assets/81064963/8a090092-0c3e-437e-9224-f0fecf82ce3e)|![simulator_screenshot_E8200FF8-6324-4467-97BA-C30D066D2D21](https://github.com/hyung6370/cleanKinder-app/assets/81064963/59bbe15e-8aea-4320-9ade-e74effca4073)|![simulator_screenshot_86B6C0FD-2F29-4E4F-9253-716DEA396932](https://github.com/hyung6370/cleanKinder-app/assets/81064963/ecd50700-c27b-451d-a35b-8e58bbbb8144)|
 
+### 📌 기능
+- 서울시 내 모든 유치원 위생 환경 조회
+- 해당 유치원의 지도, 상세정보 조회
+- 원하는 유치원을 따로 저장할 수 있다.
 
+### 📌 개발 환경
+- iOS 16.0 +
+- Xcode 14.3
 
-
-현재 작업 중입니다!
+### 📌 사용 기술 및 라이브러리
+- UIKit
+- CocoaPods
+- MVC Pattern
+- Google Maps API
 
 ### 📌 reference
 - https://data.seoul.go.kr/
