@@ -88,3 +88,16 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
+
+extension FavoriteViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
+            
+            detailVC.kinderDetail = favKinders[indexPath.row]
+            
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
+}
