@@ -8,7 +8,6 @@
 import Foundation
 
 struct KinderModel {
-    
     let kinderName: String
     
     let kinderAddress: String
@@ -30,6 +29,4 @@ struct KinderModel {
     let firstWater: String
     let secondWater: String
     let thirdWater: String
-    
-    
 }

@@ -8,8 +8,6 @@
 import UIKit
 
 class FavTableViewCell: UITableViewCell {
-    
-    
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var kinderNameLabel: UILabel!
     @IBOutlet weak var kinderAddressLabel: UILabel!

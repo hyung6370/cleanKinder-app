@@ -90,16 +90,6 @@ class ListViewController: UIViewController {
     func calculateDust(for dustDate: String?) -> UIColor {
         return colorForDate(dustDate)
     }
-    
-    
-//    func moveToFavoriteVC() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//        if let favoriteVC = storyboard.instantiateViewController(identifier: "FavVC") as? FavoriteViewController {
-//            favoriteVC.favKinders = self.favKinders
-////            self.navigationController?.pushViewController(favoriteVC, animated: true)
-//        }
-//    }
 }
 
 extension ListViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -126,7 +116,6 @@ extension ListViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         kinders.removeAll()
         
         kinderManager.fetchKinder(cityCode: selectedCityCode)
-        
     }
 }
 

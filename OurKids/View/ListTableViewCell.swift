@@ -12,7 +12,6 @@ protocol ListTableViewCellDelegate: AnyObject {
 }
 
 class ListTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var backView: UIView!
     
     @IBOutlet weak var kinderNameLabel: UILabel!
