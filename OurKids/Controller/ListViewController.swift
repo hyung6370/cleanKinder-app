@@ -40,6 +40,8 @@ class ListViewController: UIViewController {
         kinderManager.delegate = self
         
         initialData()
+        
+        loadFavKindersFromDefaults()
     }
 
     func configureUI() {
@@ -90,7 +92,6 @@ class ListViewController: UIViewController {
     func calculateDust(for dustDate: String?) -> UIColor {
         return colorForDate(dustDate)
     }
-    
 
 }
 
@@ -295,6 +296,15 @@ extension ListViewController: ListTableViewCellDelegate {
         
         if let encoded = try? encoder.encode(favKinders) {
             UserDefaults.standard.set(encoded, forKey: "favKinders")
+        }
+    }
+    
+    func loadFavKindersFromDefaults() {
+        if let savedFavKinders = UserDefaults.standard.object(forKey: "favKinders") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedFavKinders = try? decoder.decode([KinderModel].self, from: savedFavKinders) {
+                favKinders = loadedFavKinders
+            }
         }
     }
 }
