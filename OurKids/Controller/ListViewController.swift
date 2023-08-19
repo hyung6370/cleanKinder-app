@@ -90,6 +90,8 @@ class ListViewController: UIViewController {
     func calculateDust(for dustDate: String?) -> UIColor {
         return colorForDate(dustDate)
     }
+    
+
 }
 
 extension ListViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -283,6 +285,16 @@ extension ListViewController: ListTableViewCellDelegate {
            let viewControllers = tabBarController.viewControllers,
            let favoriteVC = viewControllers[1] as? FavoriteViewController {
             favoriteVC.favKinders = self.favKinders
+        }
+        
+        saveFavKindersToDefaults()
+    }
+    
+    func saveFavKindersToDefaults() {
+        let encoder = JSONEncoder()
+        
+        if let encoded = try? encoder.encode(favKinders) {
+            UserDefaults.standard.set(encoded, forKey: "favKinders")
         }
     }
 }

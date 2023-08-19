@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct KinderModel {
+struct KinderModel: Codable {
     let kinderName: String
     
     let kinderAddress: String

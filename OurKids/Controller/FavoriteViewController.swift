@@ -17,6 +17,8 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadFavKindersFromDefaults()
+        
         favTableView.register(UINib(nibName: "FavTableViewCell", bundle: nil), forCellReuseIdentifier: "FavCell")
         favTableView.delegate = self
         favTableView.dataSource = self
@@ -59,6 +61,24 @@ class FavoriteViewController: UIViewController {
         return colorForDate(dustDate)
     }
     
+    
+//    func saveFavKindersToDefaults() {
+//        let encoder = JSONEncoder()
+//        
+//        if let encoded = try? encoder.encode(favKinders) {
+//            UserDefaults.standard.set(encoded, forKey: "favKinders")
+//        }
+//    }
+    
+    func loadFavKindersFromDefaults() {
+        if let savedData = UserDefaults.standard.data(forKey: "favKinders") {
+            let decoder = JSONDecoder()
+            
+            if let loadedKinders = try? decoder.decode([KinderModel].self, from: savedData) {
+                favKinders = loadedKinders
+            }
+        }
+    }
     
 }
 
