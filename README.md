@@ -8,7 +8,8 @@
 
 <div align="center">
 
-![image](https://emptyhead.oopy.io/969024c0-06d2-4d07-9911-24e2c6601c91)
+![image](https://github.com/hyung6370/cleanKinder-app/assets/81064963/13b34f14-37b6-4f88-9053-8ea1ed3bc1ab)
+
 
 <img width="300" alt="logo" src="https://github.com/hyung6370/cleanKinder-app/assets/81064963/269b1f30-b756-43ce-89d0-6978eb72022b">
 
@@ -16,7 +17,7 @@
 
 <br />
 
-[✏️ 블로그 정리 글 보러가기](https://www.notion.so/hyung6370/969024c006d24d07991124e2c6601c91?pvs=4)
+[✏️ 블로그 정리 글 보러가기](https://emptyhead.oopy.io/969024c0-06d2-4d07-9911-24e2c6601c91)
 
 <br /><br /><hr />
 
