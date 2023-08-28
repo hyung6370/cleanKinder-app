@@ -8,8 +8,6 @@
 
 <div align="center">
 
-![image](https://github.com/hyung6370/cleanKinder-app/assets/81064963/13b34f14-37b6-4f88-9053-8ea1ed3bc1ab)
-
 
 <img width="300" alt="logo" src="https://github.com/hyung6370/cleanKinder-app/assets/81064963/269b1f30-b756-43ce-89d0-6978eb72022b">
 
