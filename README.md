@@ -8,7 +8,7 @@
 
 <div align="center">
 
-![image](https://github.com/hyung6370/cleanKinder-app/assets/81064963/02b60c19-9706-45c3-a171-a77e44fc9ca4)
+![image](https://emptyhead.oopy.io/969024c0-06d2-4d07-9911-24e2c6601c91)
 
 <img width="300" alt="logo" src="https://github.com/hyung6370/cleanKinder-app/assets/81064963/269b1f30-b756-43ce-89d0-6978eb72022b">
 
