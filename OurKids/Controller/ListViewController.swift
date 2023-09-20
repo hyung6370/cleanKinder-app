@@ -231,6 +231,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
         return kinders.count
     }
+    
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "KinderCell", for: indexPath) as! ListTableViewCell
@@ -245,7 +246,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         let illuminanceColor = calculateIlluminance(for: kinder.illuminanceDate)
         let dustColor = calculateDust(for: kinder.dustDate)
         
-        cell.insideAirImageVIew.backgroundColor = insideAirColor
+        cell.insideAirImageVIew.backgroundColor = insideAirColor        
         cell.deinfectionImageView.backgroundColor = disinfectionColor
         cell.illuminanceImageView.backgroundColor = illuminanceColor
         cell.dustImageView.backgroundColor = dustColor

@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let GOOGLE_MAPS_KEY = Bundle.main.apiKey
+        let GOOGLE_MAPS_KEY = Bundle.main.googleMapsKey
         
-        GMSServices.provideAPIKey("GOOGLE_MAPS_KEY")
+        GMSServices.provideAPIKey(GOOGLE_MAPS_KEY)
         
         return true
     }
@@ -85,18 +85,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//extension Bundle {
+//    
+//    var apiKey: String {
+//        guard let filePath = Bundle.main.path(forResource: "SecretKey", ofType: "plist"),
+//              let plistDict = NSDictionary(contentsOfFile: filePath) else {
+//            fatalError("Couldn't find file 'SecretKey.plist'.")
+//        }
+//        
+//        let plist = NSDictionary(contentsOfFile: filePath)
+//        
+//        guard let value = plist?.object(forKey: "GOOGLE_MAPS_KEY") as? String else {
+//            fatalError("Couldn't find key 'GOOGLE_MAPS_KEY' in 'SecretKey.plist'.")
+//        }
+//        return value
+//    }
+//}
 extension Bundle {
+    var googleMapsKey: String {
+        get {
+            guard let filePath = Bundle.main.path(forResource: "SecretKey", ofType: "plist") else {
+                fatalError("Couldn't find file 'SecretKey.plist'.")
+            }
+            let plist = NSDictionary(contentsOfFile: filePath)
+            
+            guard let value = plist?.object(forKey: "GOOGLE_MAPS_KEY") as? String else {
+                fatalError("Couldn't find key 'GOOGLE_MAPS_KEY' in 'SecretKey.plist'.")
+            }
+            return value
+        }
+    }
     
-    var apiKey: String {
-        guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist"),
-              let plistDict = NSDictionary(contentsOfFile: filePath) else {
-            fatalError("Couldn't find file 'SecureAPIKeys.plist'.")
+    var openSeoulKey: String {
+        get {
+            guard let filePath = Bundle.main.path(forResource: "SecretKey", ofType: "plist") else {
+                fatalError("Couldn't find file 'SecretKey.plist'.")
+            }
+            let plist = NSDictionary(contentsOfFile: filePath)
+            
+            guard let value = plist?.object(forKey: "SEOUL_SQUARE_KEY") as? String else {
+                fatalError("Couldn't find key 'SEOUL_SQUARE_KEY' in 'SecretKey.plist'.")
+            }
+            return value
         }
-        
-        guard let value = plistDict.object(forKey: "GOOGLE_MAPS_KEY") as? String else {
-            fatalError("Couldn't find key 'GOOGLE_MAPS_KEY' in 'SecureAPIKeys.plist'.")
-        }
-        
-        return value
     }
 }

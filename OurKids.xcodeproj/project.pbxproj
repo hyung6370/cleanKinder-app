@@ -21,6 +21,7 @@
 		BD3272282A851EE4008FACAB /* GmarketSansTTFBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD3272252A851EE4008FACAB /* GmarketSansTTFBold.ttf */; };
 		BD32722A2A852766008FACAB /* homeKid.json in Resources */ = {isa = PBXBuildFile; fileRef = BD3272292A852766008FACAB /* homeKid.json */; };
 		BD6C07802A8C99EF00E1F369 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BD6C077F2A8C99EF00E1F369 /* .gitignore */; };
+		BD9727CF2ABAC048007B679A /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD9727CE2ABAC048007B679A /* SecretKey.plist */; };
 		BDA61FDE2A86195A000B57DC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FDD2A86195A000B57DC /* ListViewController.swift */; };
 		BDA61FE02A861972000B57DC /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FDF2A861972000B57DC /* FavoriteViewController.swift */; };
 		BDA61FE22A861B3D000B57DC /* KinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA61FE12A861B3D000B57DC /* KinderModel.swift */; };
@@ -50,7 +51,7 @@
 		BD3272252A851EE4008FACAB /* GmarketSansTTFBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFBold.ttf; sourceTree = "<group>"; };
 		BD3272292A852766008FACAB /* homeKid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homeKid.json; sourceTree = "<group>"; };
 		BD6C077F2A8C99EF00E1F369 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		BD6C07822A8CA94900E1F369 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		BD9727CE2ABAC048007B679A /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		BDA61FDD2A86195A000B57DC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		BDA61FDF2A861972000B57DC /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		BDA61FE12A861B3D000B57DC /* KinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinderModel.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		BD3271FF2A851E93008FACAB = {
 			isa = PBXGroup;
 			children = (
-				BD6C07822A8CA94900E1F369 /* Secrets.xcconfig */,
 				BD6C077F2A8C99EF00E1F369 /* .gitignore */,
 				BD32720A2A851E93008FACAB /* OurKids */,
 				BD3272292A852766008FACAB /* homeKid.json */,
@@ -125,6 +125,7 @@
 				BD3272222A851ED1008FACAB /* Fonts */,
 				BD3272192A851E95008FACAB /* LaunchScreen.storyboard */,
 				BD32721C2A851E95008FACAB /* Info.plist */,
+				BD9727CE2ABAC048007B679A /* SecretKey.plist */,
 				BD3272142A851E93008FACAB /* OurKids.xcdatamodeld */,
 			);
 			path = OurKids;
@@ -241,6 +242,7 @@
 				BD3272132A851E93008FACAB /* Main.storyboard in Resources */,
 				BDB46DA02A89FB0A00B5FCBE /* ListTableViewCell.xib in Resources */,
 				BD3272272A851EE4008FACAB /* GmarketSansTTFMedium.ttf in Resources */,
+				BD9727CF2ABAC048007B679A /* SecretKey.plist in Resources */,
 				BDAE09F32A8DB9E0000AE805 /* FavTableViewCell.xib in Resources */,
 				BD6C07802A8C99EF00E1F369 /* .gitignore in Resources */,
 				BD3272282A851EE4008FACAB /* GmarketSansTTFBold.ttf in Resources */,
@@ -472,6 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DVWGZFH6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OurKids/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -501,6 +504,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DVWGZFH6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OurKids/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

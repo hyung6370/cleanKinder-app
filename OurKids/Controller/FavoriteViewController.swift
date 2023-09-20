@@ -23,6 +23,8 @@ class FavoriteViewController: UIViewController {
         favTableView.delegate = self
         favTableView.dataSource = self
         
+        favTableView.separatorColor = UIColor(hexCode: "ff7b00")
+        
         print(favKinders)
     }
     

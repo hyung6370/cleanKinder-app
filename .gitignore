@@ -112,3 +112,4 @@ iOSInjectionProject/
 *.xcconfig
 *.plist
 Secrets.xcconfig
+SecretKey.plist
