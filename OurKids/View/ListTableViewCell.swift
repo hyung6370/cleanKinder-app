@@ -41,7 +41,6 @@ class ListTableViewCell: UITableViewCell {
         }
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -50,8 +49,6 @@ class ListTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configureUI() {
@@ -67,8 +64,6 @@ class ListTableViewCell: UITableViewCell {
         illuminanceImageView.layer.cornerRadius = 7
         illuminanceImageView.clipsToBounds = true
     }
-
-    
     
     @IBAction func heartButtonTapped(_ sender: UIButton) {
         if heartButton.imageView?.image == UIImage(systemName: "heart") {
@@ -83,12 +78,10 @@ class ListTableViewCell: UITableViewCell {
         guard let indexPath = getCurrentIndexPath() else { return }
         delegate?.didTapHeartButton(at: indexPath)
     }
-    
 
     private func getCurrentIndexPath() -> IndexPath? {
         guard let superView = self.superview as? UITableView else { return nil }
         return superView.indexPath(for: self)
     }
-    
 }
 

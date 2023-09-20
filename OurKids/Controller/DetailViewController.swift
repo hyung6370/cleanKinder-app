@@ -38,7 +38,6 @@ class DetailViewController: UIViewController {
     
     var kinderDetail: KinderModel?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,7 +51,6 @@ class DetailViewController: UIViewController {
         mapBackView.layer.borderColor = UIColor.systemYellow.cgColor
         mapBackView.layer.cornerRadius = 15
         mapBackView.clipsToBounds = true
-        
     }
     
     func setupGoogleMaps() {
@@ -62,11 +60,9 @@ class DetailViewController: UIViewController {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         mapView.settings.myLocationButton = true
-//        mapView.isMyLocationEnabled = true
         mapView.settings.scrollGestures = true
         mapView.settings.zoomGestures = false
         mapView.settings.setAllGesturesEnabled(true)
-        
     }
     
     func updateMapWithAddress(address: String) {
@@ -111,6 +107,4 @@ class DetailViewController: UIViewController {
             updateMapWithAddress(address: kinder.kinderAddress)
         }
     }
-    
-    
 }

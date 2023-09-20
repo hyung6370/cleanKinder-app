@@ -13,7 +13,6 @@ class FavoriteViewController: UIViewController {
     
     var favKinders: [KinderModel] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,15 +62,6 @@ class FavoriteViewController: UIViewController {
         return colorForDate(dustDate)
     }
     
-    
-//    func saveFavKindersToDefaults() {
-//        let encoder = JSONEncoder()
-//        
-//        if let encoded = try? encoder.encode(favKinders) {
-//            UserDefaults.standard.set(encoded, forKey: "favKinders")
-//        }
-//    }
-    
     func loadFavKindersFromDefaults() {
         if let savedData = UserDefaults.standard.data(forKey: "favKinders") {
             let decoder = JSONDecoder()
@@ -81,7 +71,6 @@ class FavoriteViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {

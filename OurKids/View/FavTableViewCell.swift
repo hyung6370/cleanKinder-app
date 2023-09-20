@@ -26,7 +26,6 @@ class FavTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func configureUI() {
@@ -41,6 +40,5 @@ class FavTableViewCell: UITableViewCell {
         
         illuminanceImageView.layer.cornerRadius = 7
         illuminanceImageView.clipsToBounds = true
-    }
-    
+    }    
 }

@@ -46,9 +46,7 @@ struct KinderManager {
             }
 
             task.resume()
-
         }
-
     }
     
     func parseJSON(kinderData: Data, cityCode: String) {

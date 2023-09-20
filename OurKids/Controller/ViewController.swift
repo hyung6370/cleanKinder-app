@@ -10,7 +10,6 @@ import Lottie
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var lottieView: LottieAnimationView!
     @IBOutlet weak var kinderButton: UIButton!
     
@@ -21,7 +20,6 @@ class ViewController: UIViewController {
         configureUI()
     }
 
-    
     func lottieAnimation() {
         let animationView: LottieAnimationView = .init(name: "homeKid")
         animationView.contentMode = .scaleAspectFit
